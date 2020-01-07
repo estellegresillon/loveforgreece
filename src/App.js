@@ -51,7 +51,7 @@ const App = () => {
     } else {
       cursor.style.height = "50px";
       cursor.style.width = "50px";
-      cursor.style.mixBlendMode = "normal";
+      cursor.style.mixBlendMode = "screen";
       arrow.style.opacity = 1;
     }
   }
@@ -75,16 +75,17 @@ const App = () => {
           <div className="logo">LoveForGreece</div>
         </div>
         <div className="hero-scene">
-          <h1>LoveForGreece</h1>
+          <h1>Visit Santorini</h1>
         </div>
         <div className="blue-block" />
         <div className="red-block" />
         <div className="yellow-block" />
-        <img src="/home.jpg" alt="santorini-home" className="image-block" />
+        
 
         <section>
           hi
         </section>
+        <img src="/home.jpg" alt="santorini-home" className="image-block" />
 
       </div>
     </>
