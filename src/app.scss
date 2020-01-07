@@ -18,36 +18,6 @@
   height: 100vh;
 }
 
-.section-with-bg {
-  position: relative;
-  height: 110vh;
-  width: 120%;
-  left: -10%;
-  //transform: rotate(-5deg);
-  background-color: rgb(255, 200, 200);
-}
-
-.section-with-no-bg {
-  position: relative;
-  height: 110vh;
-  width: 120%;
-  left: -10%;
-  //transform: rotate(-5deg);
-  background-color: #fff;
-}
-
-.fa-long-arrow-alt-down { 
-  position: absolute;
-  margin-top: 15px;
-  margin-left: 20px;
-  color: #fff; 
-  font-size: 20px;
-  z-index: 998;
-  opacity: 0;
-  transition: 0.5s opacity ease;
-  animation: 2s floatArrow infinite;
-}
-
 .hero-scene {
   display: flex;
   align-items: center;
@@ -64,17 +34,48 @@
   }
 }
 
+.section-with-bg {
+  position: relative;
+  height: 110vh;
+  width: 120%;
+  left: -10%;
+  transition: 0.5s all ease;
+  background-color: rgb(255, 200, 200);
+}
+
+.section-with-no-bg {
+  position: relative;
+  height: 110vh;
+  width: 120%;
+  left: -10%;
+  transition: 0.5s all ease;
+  background-color: #fff;
+}
+
 .image-block {
   position: relative;
-  width: 100vw;
-  height: auto;
   opacity: 1;
+  height: auto;
+  width: 100vw;
+  transition: 1s all ease;
   //left: 0;
   //top: 0;
   //animation: 1s slideUpBg;
   //animation-delay: 1.5s;
   //animation-fill-mode: forwards;
   //z-index: -999;
+}
+
+.fa-long-arrow-alt-down { 
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 20px;
+  color: #fff; 
+  font-size: 20px;
+  z-index: 998;
+  opacity: 0;
+  transition: 0.5s opacity ease;
+  animation: 2s floatArrow infinite;
 }
 
 #cursor {

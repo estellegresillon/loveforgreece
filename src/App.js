@@ -1,16 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import "./app.scss";
 
+function usePrevious(value) {
+  const ref = useRef();
+  useEffect(() => {
+    ref.current = value;
+  });
+  return ref.current;
+}
+
 const App = () => {
+  const [count, setCount] = useState(0);
+  const prevCount = usePrevious(count)
+
   const setCursorMove = e => {
-    // const windowHeight = window.innerHeight;
     const cursor = document.getElementById("cursor");
     const arrow = document.querySelector(".fa-long-arrow-alt-down");
     const coloredCursor = document.getElementById("colored-cursor");
     const top = document.querySelector(".app-layout").scrollTop;
-    const x = e.clientX + 170;
-    const y = e.clientY + 170;
+    const x = e.clientX ;
+    const y = e.clientY;
     const xbis = x - 170;
     const ybis = y - 170;
 
@@ -33,39 +43,52 @@ const App = () => {
     }
   };
 
-  const setCursorScroll = e => {
-    const windowHeight = window.innerHeight;
-    const cursor = document.getElementById("cursor");
-    const coloredCursor = document.getElementById("colored-cursor");
-    const arrow = document.querySelector(".fa-long-arrow-alt-down");
-    const top = document.querySelector(".app-layout").scrollTop;
+  // const setCursorScroll = e => {
+  //   const windowHeight = window.innerHeight;
+  //   const cursor = document.getElementById("cursor");
+  //   const coloredCursor = document.getElementById("colored-cursor");
+  //   const arrow = document.querySelector(".fa-long-arrow-alt-down");
+  //   setCount(e.target.scrollTop)
 
-    console.log(top)
+  //   console.log("hi")
+  //   coloredCursor.style.opacity = 0;
+  //   coloredCursor.style.left = 0 + "px";
+  //   coloredCursor.style.top = 0 + "px";
+  
+  //   if (e.target.scrollTop > ((windowHeight / 2))) {
+  //     cursor.style.height = "10px";
+  //     cursor.style.width = "10px";
+  //     arrow.style.opacity = 0;
+  //     //coloredCursor.style.opacity = 0;
+  //   } else {
+  //     cursor.style.height = "50px";
+  //     cursor.style.width = "50px";
+  //     arrow.style.opacity = 1;
+  //    // coloredCursor.style.opacity = 1;
+  //   }
+  // }
 
-    if (e.target.scrollTop > ((windowHeight / 2))) {
-      cursor.style.height = "10px";
-      cursor.style.width = "10px";
-      arrow.style.opacity = 0;
-      coloredCursor.style.opacity = 0;
-    } else {
-      cursor.style.height = "50px";
-      cursor.style.width = "50px";
-      arrow.style.opacity = 1;
-      coloredCursor.style.opacity = 1;
+  useEffect(() => {
+    const section = document.querySelector(".section-with-bg")
+    const sectionBis = document.querySelector(".section-with-no-bg")
+    if (count > prevCount) {
+      section.style.transform = "rotate(-8deg)"
+      sectionBis.style.transform = "rotate(-8deg)"
+    } else if (count < prevCount) {
+      section.style.transform = "rotate(8deg)"
+      sectionBis.style.transform = "rotate(8deg)"
     }
+  }, [count, prevCount])
 
-
-  }
-
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener("mousemove", setCursorMove, false);
     return () => window.removeEventListener("mousemove", setCursorMove, false);
   }, []);
 
-  React.useEffect(() => {
-    document.addEventListener("scroll", setCursorScroll, true);
-    return () => document.removeEventListener("scroll", setCursorScroll, true);
-  }, []);
+  // useEffect(() => {
+  //   document.addEventListener("scroll", setCursorScroll, true);
+  //   return () => document.removeEventListener("scroll", setCursorScroll, true);
+  // }, []);
 
   return (
     <>
@@ -82,6 +105,7 @@ const App = () => {
         <div className="hero-scene">
           <h1>Visit Santorini</h1>
         </div>
+        
         <section className="section-with-bg">
           hi
         </section>
