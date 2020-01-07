@@ -97,6 +97,19 @@ section {
   z-index: -999;
 }
 
+.image-block {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  animation: 1s slideUpBg;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  left: 0;
+  z-index: -999;
+}
+
 @keyframes slideUp {
   from {
     height: 0%;
@@ -109,6 +122,17 @@ section {
   to {
     height: 0%;
     bottom: 100%;
+  }
+}
+
+@keyframes slideUpBg {
+  from {
+    bottom: -40%;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
   }
 }
 

@@ -65,6 +65,7 @@ const App = () => {
         <div className="blue-block" />
         <div className="red-block" />
         <div className="yellow-block" />
+        <img src="/home.jpg" alt="santorini-home" className="image-block" />
         <i className="fas fa-long-arrow-alt-down" />
 
         <section>
