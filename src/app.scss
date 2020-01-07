@@ -2,7 +2,7 @@
   position: fixed;
   z-index: 999;
   height: 100px;
-  display: none;
+  display: flex;
   align-items: center;
   width: 100%;
   top: 0;
@@ -12,45 +12,28 @@
   }
 }
 
-.header.sticky {
-  display: flex;
-}
-
 .app-layout {
   position: relative;
   overflow: scroll;
   height: 100vh;
 }
 
-section {
+.section-with-bg {
   position: relative;
   height: 110vh;
   width: 120%;
   left: -10%;
   //transform: rotate(-5deg);
-  background-color: red;
+  background-color: rgb(255, 200, 200);
 }
 
-#cursor {
-  height: 50px;
-  width: 50px;
-  background-color: rgb(89, 203, 255);
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0;
-  z-index: 997;
-}
-
-#colored-cursor {
-  height: 200px;
-  width: 200px;
-  background-color: rgb(255, 237, 180);
-  border: 100px solid rgb(15, 99, 226);
-  position: absolute;
-  border-radius: 50%;
-  mix-blend-mode: screen;
-  opacity: 0;
-  z-index: 996;
+.section-with-no-bg {
+  position: relative;
+  height: 110vh;
+  width: 120%;
+  left: -10%;
+  //transform: rotate(-5deg);
+  background-color: #fff;
 }
 
 .fa-long-arrow-alt-down { 
@@ -92,6 +75,30 @@ section {
   //animation-delay: 1.5s;
   //animation-fill-mode: forwards;
   //z-index: -999;
+}
+
+#cursor {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(89, 203, 255);
+  position: absolute;
+  border-radius: 50%;
+  mix-blend-mode: darken;
+  opacity: 0;
+  z-index: 997;
+}
+
+#colored-cursor {
+  height: 200px;
+  width: 200px;
+  background-color: rgb(255, 237, 180);
+  border: 100px solid rgb(15, 99, 226);
+  position: absolute;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  opacity: 0;
+  z-index: 996;
+  transition: 1s all ease;
 }
 
 .blue-block {

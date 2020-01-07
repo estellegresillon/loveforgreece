@@ -3,8 +3,8 @@ import React from 'react';
 import "./app.scss";
 
 const App = () => {
-  const setCursor = e => {
-    const windowHeight = window.innerHeight;
+  const setCursorMove = e => {
+    // const windowHeight = window.innerHeight;
     const cursor = document.getElementById("cursor");
     const arrow = document.querySelector(".fa-long-arrow-alt-down");
     const coloredCursor = document.getElementById("colored-cursor");
@@ -33,23 +33,18 @@ const App = () => {
     }
   };
 
-  const setMenuColor = e => {
+  const setCursorScroll = e => {
     const windowHeight = window.innerHeight;
-    const menu = document.querySelector(".header");
     const cursor = document.getElementById("cursor");
     const coloredCursor = document.getElementById("colored-cursor");
     const arrow = document.querySelector(".fa-long-arrow-alt-down");
+    const top = document.querySelector(".app-layout").scrollTop;
 
-    if (e.target.scrollTop > 0) {
-      menu.classList.add("sticky");
-    } else {
-      menu.classList.remove("sticky");
-    }
+    console.log(top)
 
     if (e.target.scrollTop > ((windowHeight / 2))) {
       cursor.style.height = "10px";
       cursor.style.width = "10px";
-      // disable arrow if scroll but no mouse move
       arrow.style.opacity = 0;
       coloredCursor.style.opacity = 0;
     } else {
@@ -58,16 +53,18 @@ const App = () => {
       arrow.style.opacity = 1;
       coloredCursor.style.opacity = 1;
     }
+
+
   }
 
   React.useEffect(() => {
-    window.addEventListener("mousemove", setCursor, false);
-    return () => window.removeEventListener("mousemove", setCursor, false);
+    window.addEventListener("mousemove", setCursorMove, false);
+    return () => window.removeEventListener("mousemove", setCursorMove, false);
   }, []);
 
   React.useEffect(() => {
-    document.addEventListener("scroll", setMenuColor, true);
-    return () => document.removeEventListener("scroll", setMenuColor, true);
+    document.addEventListener("scroll", setCursorScroll, true);
+    return () => document.removeEventListener("scroll", setCursorScroll, true);
   }, []);
 
   return (
@@ -85,7 +82,10 @@ const App = () => {
         <div className="hero-scene">
           <h1>Visit Santorini</h1>
         </div>
-        <section>
+        <section className="section-with-bg">
+          hi
+        </section>
+        <section className="section-with-no-bg">
           hi
         </section>
         <img src="/home.jpg" alt="santorini-home" className="image-block" />
