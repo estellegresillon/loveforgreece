@@ -48,7 +48,7 @@ section {
   font-size: 20px;
   z-index: 99999;
   opacity: 0;
-  transition: 1s opacity ease;
+  //transition: 0.s opacity ease;
   animation: 2s floatArrow infinite;
 }
 
@@ -59,6 +59,8 @@ section {
   width: 100%;
   mix-blend-mode: overlay;
   height: 100vh;
+  font-family: "Playfair Display";
+  //font-size: 36px;
 }
 
 .blue-block {
@@ -101,14 +103,14 @@ section {
 
 .image-block {
   position: absolute;
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  height: auto;
   opacity: 0;
+  left: 0;
+  top: 0;
   animation: 1s slideUpBg;
   animation-delay: 1.5s;
   animation-fill-mode: forwards;
-  bottom: 0;
-  left: 0;
   z-index: -999;
 }
 
@@ -129,11 +131,11 @@ section {
 
 @keyframes slideUpBg {
   from {
-    bottom: -40%;
+    top: 40%;
     opacity: 0;
   }
   to {
-    bottom: 0;
+    top: 0;
     opacity: 1;
   }
 }
