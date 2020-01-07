@@ -35,7 +35,7 @@ section {
   background-color: rgb(89, 203, 255);
   position: absolute;
   border-radius: 50%;
-  mix-blend-mode: overlay;
+  // mix-blend-mode: overlay;
   opacity: 0;
   z-index: 9999;
 }
@@ -46,6 +46,7 @@ section {
   margin-left: 20px;
   color: #fff; 
   font-size: 20px;
+  z-index: 99999;
   opacity: 0;
   transition: 1s opacity ease;
   animation: 2s floatArrow infinite;
