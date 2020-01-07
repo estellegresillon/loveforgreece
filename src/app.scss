@@ -14,7 +14,6 @@
 
 .header.sticky {
   display: flex;
-  background-color: #fff;
 }
 
 .app-layout {
@@ -38,9 +37,20 @@ section {
   background-color: rgb(89, 203, 255);
   position: absolute;
   border-radius: 50%;
+  opacity: 0;
+  z-index: 997;
+}
+
+#colored-cursor {
+  height: 200px;
+  width: 200px;
+  background-color: rgb(255, 237, 180);
+  border: 100px solid rgb(15, 99, 226);
+  position: absolute;
+  border-radius: 50%;
   mix-blend-mode: screen;
   opacity: 0;
-  z-index: 9999;
+  z-index: 996;
 }
 
 .fa-long-arrow-alt-down { 
@@ -49,9 +59,9 @@ section {
   margin-left: 20px;
   color: #fff; 
   font-size: 20px;
-  z-index: 99999;
+  z-index: 998;
   opacity: 0;
-  //transition: 0.s opacity ease;
+  transition: 0.5s opacity ease;
   animation: 2s floatArrow infinite;
 }
 
@@ -65,6 +75,10 @@ section {
   font-family: "Playfair Display";
   font-size: 36px;
   background-color: white;
+
+  h1 {
+    color: rgb(15, 99, 226);
+  }
 }
 
 .image-block {
@@ -89,7 +103,7 @@ section {
   animation-fill-mode: forwards;
   bottom: 0;
   left: 0;
-  z-index: -999;
+  z-index: 999;
 }
 
 .red-block {
@@ -102,7 +116,7 @@ section {
   animation-fill-mode: forwards;
   bottom: 0;
   left: 0;
-  z-index: -999;
+  z-index: 999;
 }
 
 .yellow-block {
@@ -115,7 +129,7 @@ section {
   animation-fill-mode: forwards;
   bottom: 0;
   left: 0;
-  z-index: -999;
+  z-index: 999;
 }
 
 @keyframes slideUp {
