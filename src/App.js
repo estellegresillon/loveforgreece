@@ -8,13 +8,14 @@ const App = () => {
     const cursor = document.getElementById("cursor");
     const arrow = document.querySelector(".fa-long-arrow-alt-down");
     const x = e.clientX;
-    const y = e.clientY;  
+    const y = e.clientY;
 
-    if ( typeof x !== 'undefined' ){
+    if (typeof x !== 'undefined') {
+      cursor.style.opacity = 1;
       cursor.style.left = x + "px";
       cursor.style.top = y + "px";
 
-      if (windowHeight / y < 2) {
+      if (windowHeight / y < 2.5) {
         arrow.style.opacity = 1;
         arrow.style.left = x + "px";
         arrow.style.top = y + "px";
@@ -23,11 +24,22 @@ const App = () => {
   };
 
   const setMenuColor = e => {
+    const windowHeight = window.innerHeight;
     const menu = document.querySelector(".header");
+    const cursor = document.getElementById("cursor");
 
     if (e.target.scrollTop > 0) {
       menu.classList.add("sticky");
     } else menu.classList.remove("sticky");
+
+    if (e.target.scrollTop > (windowHeight / 2)) {
+      cursor.style.height = "10px";
+      cursor.style.width = "10px";
+      cursor.style.mixBlendMode = "screen";
+    } else {
+      cursor.style.height = "50px";
+      cursor.style.width = "50px";
+    }
   }
 
   React.useEffect(() => {
@@ -54,11 +66,11 @@ const App = () => {
         <div className="red-block" />
         <div className="yellow-block" />
         <i className="fas fa-long-arrow-alt-down" />
-        
+
         <section>
           hi
         </section>
-        
+
       </div>
     </>
   );
