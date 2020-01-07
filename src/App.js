@@ -57,10 +57,10 @@ const App = () => {
       <div id="cursor" />
       <div className="app-layout">
         <div className="header">
-          <div className="logo">Logo</div>
+          <div className="logo">LoveForGreece</div>
         </div>
         <div className="hero-scene">
-          <h1>Hero scene message</h1>
+          <h1>LoveForGreece</h1>
         </div>
         <div className="blue-block" />
         <div className="red-block" />
