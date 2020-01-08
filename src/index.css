@@ -5,7 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: none;
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background: #ff388a;
+  color: white;
 }
 
 code {
