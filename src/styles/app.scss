@@ -13,30 +13,17 @@
   z-index: 1;
 }
 
-#section-one {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  //transform: rotate(-5deg);
-  background-color: rgb(255, 255, 184);
-  
-  .message-stroke {
-    font-weight: 900;
-    font-style: italic;
-    font-size: 50px;
-    margin-top: -25px;
-    font-family: "Playfair Display", serif;
-    -webkit-text-stroke-color: #00327c;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-fill-color: rgba(0, 0, 0, 0);
-  }
+.message-stroke {
+  font-weight: 900;
+  font-style: italic;
+  font-size: 50px;
+  margin-top: -25px;
+  font-family: "Playfair Display", serif;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
 }
 
-#hero-scene, #section-two {
+#hero-scene {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -59,16 +46,43 @@
   }
 
   .message-stroke {
-    font-weight: 900;
-    font-style: italic;
-    font-size: 50px;
-    margin-top: -25px;
-    font-family: "Playfair Display", serif;
     -webkit-text-stroke-color: #0f63e2;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-fill-color: rgba(0, 0, 0, 0);
   }
 }
+
+#section-one, #section-two {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 120vw;
+  left: -10vw;
+  height: 100vh;
+}
+
+#section-three {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 20vh;
+}
+
+#section-one, #section-three { background-color: rgb(255, 255, 184); }
+#section-two, #footer { background-color: #fff; }
 
 .cursor {
   position: absolute;
@@ -83,6 +97,7 @@
   pointer-events: none;
   opacity: 1;
   mix-blend-mode: screen;
+  transition: 0.5s all ease;
 }
 
 .cursor-small {

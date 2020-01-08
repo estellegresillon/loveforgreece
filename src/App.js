@@ -17,14 +17,20 @@ const App = () => {
   const prevCount = usePrevious(count)
   
   useEffect(() => {
-    const section = document.getElementById("section-one");
-    const sectionBis = document.getElementById("section-two");
-    if (count > prevCount) {
-      section.style.transform = "rotate(-8deg)";
-      sectionBis.style.transform = "rotate(-8deg)";
-    } else if (count < prevCount) {
-      section.style.transform = "rotate(8deg)";
-      sectionBis.style.transform = "rotate(8deg)";
+    const sectionOne = document.getElementById("section-one");
+    const sectionTwo = document.getElementById("section-two");
+    if (count < prevCount) {
+      // scroll up
+      sectionOne.classList.remove("bg-spin-down")
+      sectionTwo.classList.remove("bg-spin-down")
+      sectionOne.classList.add("bg-spin-up")
+      sectionTwo.classList.add("bg-spin-up")
+    } else if (count > prevCount) {
+      // scroll down
+      sectionOne.classList.remove("bg-spin-up")
+      sectionTwo.classList.remove("bg-spin-up")
+      sectionOne.classList.add("bg-spin-down")
+      sectionTwo.classList.add("bg-spin-down")
     }
   }, [count, prevCount]);
 
@@ -102,6 +108,14 @@ const App = () => {
       </div>
 
       <div id="section-two">
+        <div className="message-stroke">Hello</div>
+      </div>
+
+      <div id="section-three">
+        <div className="message-stroke">Hello</div>
+      </div>
+
+      <div id="footer">
         <div className="message-stroke">Hello</div>
       </div>
     </div>
