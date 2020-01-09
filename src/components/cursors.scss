@@ -1,0 +1,33 @@
+.cursor {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  left: 0;
+  background: #ffb350;
+  border-radius: 80%;
+  border: 130px solid rgb(15, 99, 226);
+  backface-visibility: hidden;
+  pointer-events: none;
+  opacity: 1;
+  mix-blend-mode: screen;
+  transition: 0.5s all ease;
+}
+
+.cursor-small {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background: rgb(89, 203, 255);
+  border-radius: 80%;
+  backface-visibility: hidden;
+  pointer-events: none;
+  opacity: 1;
+  z-index: 999;
+  animation: 1s fadeIn ease;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}

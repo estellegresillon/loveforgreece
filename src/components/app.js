@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
-import "./app.scss";
-import "./overlays.scss";
+import "./cursors.scss";
 
+import Overlays from "./overlays/overlays";
 import Dots from "./dots/dots";
 import Header from "./header/header";
+import HeroScene from "./hero-scene/hero-scene";
 import Sections from "./sections/sections";
+import Footer from "./footer/footer";
 
-import { onScrollDirection, usePrevious } from "./scroll-helper";
-import { onCursorMove, toggleCursor } from "./cursor-helper";
+import { onScrollDirection, usePrevious } from "../helpers/scroll";
+import { onCursorMove, toggleCursor } from "../helpers/cursor";
 
 const App = () => {
   //////////// SCROLL
@@ -65,22 +67,13 @@ const App = () => {
 
   return (
     <div className="app">
-      <div className="mount-animation-light-blue" />
-      <div className="mount-animation-blue" />
-      <div className="mount-animation-yellow" />
-      <Dots />
       <div className="cursor-small"></div>
+      <Overlays />
+      <Dots />
       <Header />
-      <div id="hero-scene">
-        <div className="cursor"></div>
-        <div className="message">Visit our islands</div>
-        <div className="message-stroke">- The Cyclades & the Egee sea -</div>
-        <i className="far fa-arrow-alt-circle-down" />
-      </div>
+      <HeroScene />
       <Sections />
-      <div id="footer">
-        <div className="message-stroke">Hello</div>
-      </div>
+      <Footer />
     </div>
   );
 }

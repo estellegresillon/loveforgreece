@@ -10,6 +10,12 @@ body {
   padding: 0;
 }
 
+.app {
+  position: relative;
+  width: 100vw;
+  cursor: none;
+}
+
 body::-webkit-scrollbar {
   display: none;
 }

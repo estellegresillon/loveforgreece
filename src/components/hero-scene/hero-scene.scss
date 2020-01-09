@@ -1,0 +1,43 @@
+#hero-scene {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(100vw - 80px);
+  height: 100vh;
+  max-width: 100%;
+  box-sizing: border-box;
+  cursor: none;
+  touch-action: none;
+  background-color: #fff;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 40px;
+
+  .message {
+    font-weight: 900;
+    font-size: 72px;
+    color: rgb(15, 99, 226);
+    font-family: "Playfair Display", serif;
+  }
+
+  .message-stroke {
+    font-weight: 900;
+    font-style: italic;
+    font-size: 50px;
+    margin-top: -25px;
+    font-family: "Playfair Display", serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke-color: #0f63e2;
+  }
+
+  i {
+    position: absolute;
+    color: #59cbff;
+    bottom: 4vh;
+    font-size: 32px;
+    animation: 2s cursorTap infinite;
+  }
+}
