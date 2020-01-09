@@ -95,12 +95,23 @@ const App = () => {
       <div className="mount-animation-yellow" />
 
       <div className="cursor-small"></div>
-      <div className="header"></div>
+      <div className="header">
+        <div className="logo"><span><i className="fas fa-sun" />VISIT</span>SANTORINI</div>
+        <div className="navigation">
+          <div className="nav-item">
+            SECTION ONE
+          </div>
+          <div className="nav-item">
+            SECTION TWO
+          </div>
+        </div>
+      </div>
 
       <div id="hero-scene">
         <div className="cursor"></div>
-        <div className="message">Visit Santorini</div>
+        <div className="message">Visit our islands</div>
         <div className="message-stroke">- The Cyclades & the Egee sea -</div>
+        <i className="far fa-arrow-alt-circle-down" />
       </div>
 
       <div id="section-one">

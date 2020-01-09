@@ -6,11 +6,42 @@
 
 .header {
   position: fixed;
-  height: 10vh;
+  height: 15vh;
   width: 100vw;
   max-width: 100%;
   box-sizing: border-box;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: #59cbff;
+    margin-left: 5vw;
+
+    span { font-weight: 100; }
+  }
+
+  .navigation {
+    display: flex;
+    margin-right: 5vw;
+    color: #59cbff;
+
+    .nav-item {
+      font-weight: 900;
+      font-size: 12px;
+      margin-left: 40px;
+      transition: 0.5s all ease;
+      position: relative;
+      text-decoration: none;
+
+      &:hover {
+        color: rgb(15, 99, 226);
+      }
+    }
+  }
 }
 
 .message-stroke {
@@ -47,6 +78,14 @@
 
   .message-stroke {
     -webkit-text-stroke-color: #0f63e2;
+  }
+
+  i {
+    position: absolute;
+    color: #59cbff;
+    bottom: 4vh;
+    font-size: 32px;
+    animation: 2s cursorTap infinite;
   }
 }
 
@@ -112,4 +151,8 @@
   pointer-events: none;
   opacity: 1;
   z-index: 999;
+  animation: 1s fadeIn ease;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
