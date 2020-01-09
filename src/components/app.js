@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 import "./app.scss";
+import "./overlays.scss";
 
-import Overlays from "./overlays/overlays";
 import Dots from "./dots/dots";
 import Header from "./header/header";
 import Sections from "./sections/sections";
@@ -65,7 +65,9 @@ const App = () => {
 
   return (
     <div className="app">
-      <Overlays />
+      <div className="mount-animation-light-blue" />
+      <div className="mount-animation-blue" />
+      <div className="mount-animation-yellow" />
       <Dots />
       <div className="cursor-small"></div>
       <Header />
