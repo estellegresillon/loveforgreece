@@ -7,6 +7,7 @@
   width: 120vw;
   left: -10vw;
   height: 100vh;
+  color: #0f63e2;
 }
 
 #section-three {
@@ -17,6 +18,7 @@
   justify-content: center;
   width: 100vw;
   height: 100vh;
+  color: #0f63e2;
 }
 
 .message-stroke {
@@ -29,7 +31,7 @@
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
 }
 
-#section-one, #section-three { background-color: rgb(255, 255, 184); }
+#section-one, #section-three { background-color: #ffe2e7; }
 #section-two { background-color: #fff; }
 
 .bg-spin-up {
