@@ -4,56 +4,6 @@
   cursor: none;
 }
 
-.header {
-  position: fixed;
-  height: 15vh;
-  width: 100vw;
-  max-width: 100%;
-  box-sizing: border-box;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  .logo {
-    font-weight: 900;
-    letter-spacing: -1px;
-    color: #59cbff;
-    margin-left: 5vw;
-
-    span { font-weight: 100; }
-  }
-
-  .navigation {
-    display: flex;
-    margin-right: 5vw;
-    color: #59cbff;
-
-    .nav-item {
-      font-weight: 900;
-      font-size: 12px;
-      margin-left: 40px;
-      transition: 0.5s all ease;
-      position: relative;
-      text-decoration: none;
-
-      &:hover {
-        color: rgb(15, 99, 226);
-      }
-    }
-  }
-}
-
-.message-stroke {
-  font-weight: 900;
-  font-style: italic;
-  font-size: 50px;
-  margin-top: -25px;
-  font-family: "Playfair Display", serif;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
-}
-
 #hero-scene {
   position: relative;
   display: flex;
@@ -77,6 +27,13 @@
   }
 
   .message-stroke {
+    font-weight: 900;
+    font-style: italic;
+    font-size: 50px;
+    margin-top: -25px;
+    font-family: "Playfair Display", serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
     -webkit-text-stroke-color: #0f63e2;
   }
 
@@ -89,27 +46,6 @@
   }
 }
 
-#section-one, #section-two {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  width: 120vw;
-  left: -10vw;
-  height: 100vh;
-}
-
-#section-three {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-}
-
 #footer {
   display: flex;
   flex-direction: column;
@@ -118,10 +54,8 @@
   justify-content: center;
   width: 100vw;
   height: 20vh;
+  background-color: #fff;
 }
-
-#section-one, #section-three { background-color: rgb(255, 255, 184); }
-#section-two, #footer { background-color: #fff; }
 
 .cursor {
   position: absolute;
