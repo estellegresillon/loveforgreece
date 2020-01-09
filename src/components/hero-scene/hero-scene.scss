@@ -1,3 +1,6 @@
+$dark-blue: #0f63e2;
+$blue: #59cbff;
+
 #hero-scene {
   position: relative;
   display: flex;
@@ -18,7 +21,7 @@
   .message {
     font-weight: 900;
     font-size: 72px;
-    color: #0f63e2;
+    color: $dark-blue;
     font-family: "Playfair Display", serif;
   }
 
@@ -30,12 +33,12 @@
     font-family: "Playfair Display", serif;
     -webkit-text-stroke-width: 1px;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke-color: #0f63e2;
+    -webkit-text-stroke-color: $dark-blue;
   }
 
   i {
     position: absolute;
-    color: #59cbff;
+    color: $blue;
     bottom: 4vh;
     font-size: 32px;
     animation: 2s cursorTap infinite;

@@ -1,12 +1,16 @@
+$dark-blue: #0f63e2;
+$blue: rgb(89, 203, 255);
+$orange: #ffb350;
+
 .cursor {
   position: absolute;
   width: 200px;
   height: 200px;
   top: 0;
   left: 0;
-  background: #ffb350;
+  background: $orange;
   border-radius: 80%;
-  border: 130px solid rgb(15, 99, 226);
+  border: 130px solid $dark-blue;
   backface-visibility: hidden;
   pointer-events: none;
   opacity: 1;
@@ -20,7 +24,7 @@
   height: 20px;
   top: 0;
   left: 0;
-  background: rgb(89, 203, 255);
+  background: $blue;
   border-radius: 80%;
   backface-visibility: hidden;
   pointer-events: none;

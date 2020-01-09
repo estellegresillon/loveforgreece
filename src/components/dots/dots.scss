@@ -1,3 +1,8 @@
+$dark-blue: #0f63e2;
+$blue: #59cbff;
+$orange: #ffb350;
+$pink: #ffc0cb;
+
 @keyframes dotFall {
   from {
     opacity: 1;
@@ -36,7 +41,7 @@
   height: 10px;
   width: 10px;
   left: 5vw;
-  background-color: #ffb350;
+  background-color: $orange;
   animation: 14s dotFall infinite;
 }
 
@@ -44,7 +49,7 @@
   height: 13px;
   width: 13px;
   left: 20vw;
-  background-color: rgb(15, 99, 226);
+  background-color: $dark-blue;
   animation: 12s dotFall infinite;
   animation-delay: 5s;
 }
@@ -53,7 +58,7 @@
   height: 15px;
   width: 15px;
   left: 40vw;
-  background-color: pink;
+  background-color: $pink;
   animation: 13s dotFall infinite;
   animation-delay: 2s;
 }
@@ -62,7 +67,7 @@
   height: 20px;
   width: 20px;
   left: 60vw;
-  background-color: #59cbff;
+  background-color: $blue;
   animation: 15s dotFall infinite;
   animation-delay: 10s;
 }
@@ -71,7 +76,7 @@
   height: 11px;
   width: 11px;
   left: 80vw;
-  background-color: red;
+  background-color: $pink;
   animation: 11s dotFall infinite;
   animation-delay: 2s;
 }
@@ -80,7 +85,7 @@
   height: 17px;
   width: 17px;
   left: 95vw;
-  background-color: rgb(15, 184, 226);
+  background-color: $blue;
   animation: 16s dotFall infinite;
   animation-delay: 7s;
 }
