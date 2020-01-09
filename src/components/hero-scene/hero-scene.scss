@@ -1,7 +1,17 @@
 $dark-blue: #0f63e2;
 $blue: #59cbff;
 
+@keyframes fadeInHome {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 #hero-scene {
+  opacity: 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -17,10 +27,13 @@ $blue: #59cbff;
   overflow: hidden;
   text-align: center;
   margin: 0 40px;
+  animation: 3s fadeInHome;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
 
   .message {
     font-weight: 900;
-    font-size: 72px;
+    font-size: 94px;
     color: $dark-blue;
     font-family: "Playfair Display", serif;
   }
@@ -28,7 +41,7 @@ $blue: #59cbff;
   .message-stroke {
     font-weight: 900;
     font-style: italic;
-    font-size: 50px;
+    font-size: 72px;
     margin-top: -25px;
     font-family: "Playfair Display", serif;
     -webkit-text-stroke-width: 1px;

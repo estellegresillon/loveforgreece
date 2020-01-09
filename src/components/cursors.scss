@@ -4,13 +4,13 @@ $orange: #ffb350;
 
 .cursor {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 240px;
+  height: 240px;
   top: 0;
   left: 0;
   background: $orange;
   border-radius: 80%;
-  border: 130px solid $dark-blue;
+  border: 160px solid $dark-blue;
   backface-visibility: hidden;
   pointer-events: none;
   opacity: 1;

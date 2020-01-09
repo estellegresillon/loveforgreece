@@ -45,8 +45,8 @@ const App = () => {
     const heroScene = document.getElementById("hero-scene");
     const cursor = document.querySelector(".cursor");
 
-    heroScene.addEventListener("mousemove", (e) => { onCursorMove(e, heroScene, cursor, 230) }, false);
-    return () => heroScene.removeEventListener("mousemove", (e) => { onCursorMove(e, heroScene, cursor, 230) }, false);
+    heroScene.addEventListener("mousemove", (e) => { onCursorMove(e, heroScene, cursor, 280) }, false);
+    return () => heroScene.removeEventListener("mousemove", (e) => { onCursorMove(e, heroScene, cursor, 280) }, false);
   }, []);
 
   useEffect(() => {

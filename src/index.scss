@@ -1,3 +1,5 @@
+$pink: #ffc0cb;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -21,7 +23,7 @@ body::-webkit-scrollbar {
 }
 
 ::selection {
-  background: #ff388a;
+  background: $pink;
   color: white;
 }
 
