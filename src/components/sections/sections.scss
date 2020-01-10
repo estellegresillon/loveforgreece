@@ -46,7 +46,7 @@ $light-pink: #ffe2e7;
     transform: rotate(0deg);
   }
   30% {
-    transform: rotate(-5deg);
+    transform: rotate(5deg);
   }
   to {
     transform: rotate(0deg);
@@ -62,7 +62,7 @@ $light-pink: #ffe2e7;
     transform: rotate(0deg);
   }
   30% {
-    transform: rotate(5deg);
+    transform: rotate(-5deg);
   }
   to {
     transform: rotate(0deg);

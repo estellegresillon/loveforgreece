@@ -16,7 +16,7 @@ const App = () => {
   //////////// SCROLL
   const [count, setCount] = useState(0);
   const prevCount = usePrevious(count)
-  
+
   useEffect(() => {
     const sectionOne = document.getElementById("section-one");
     const sectionTwo = document.getElementById("section-two");
