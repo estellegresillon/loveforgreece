@@ -9,7 +9,6 @@ $blue: #59cbff;
   }
 }
 
-
 #footer {
   display: flex;
   flex-direction: column;
@@ -20,4 +19,12 @@ $blue: #59cbff;
   height: 20vh;
   background-color: #fff;
   color: $blue;
+}
+
+#footer-img {
+  width: 100vw;
+  height: 10vh;
+  background-image: url("/home.jpg");
+  background-size: cover;
+  background-position: bottom;
 }

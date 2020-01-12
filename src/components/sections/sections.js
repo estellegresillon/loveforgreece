@@ -5,6 +5,7 @@ import "./sections.scss";
 const Sections = () => {
   const [isSectionOneVisible, setSectionOneVisible] = useState(false);
   const [isSectionTwoVisible, setSectionTwoVisible] = useState(false);
+  const [isSectionThreeVisible, setSectionThreeVisible] = useState(false);
 
   const triggerImage = () => {
     const windowHeight = window.innerHeight;
@@ -20,6 +21,12 @@ const Sections = () => {
       setSectionTwoVisible(true);
     } else if (view + 200 < (windowHeight * 2)) {
       setSectionTwoVisible(false);
+    }
+
+    if (view + 400 > (windowHeight * 3)) {
+      setSectionThreeVisible(true);
+    } else if (view + 400 < (windowHeight * 3)) {
+      setSectionThreeVisible(false);
     }
   }
 
@@ -76,16 +83,23 @@ const Sections = () => {
     </div>
 
     <div id="section-three">
-      <div className="message-stroke">Get your guide :</div>
-      <div className="message-plain">Receive a free guide for your tour in the cyclades directly in your email box</div>
-      <div className="guide-form">
-        <label>Name</label>
-        <input type="text"></input>
-        <label>e-mail</label>
-        <input type="text"></input>
-        <button type="submit">GET THE GUIDE</button>
-      </div>
-
+      {isSectionThreeVisible && 
+        <>
+          <div className="left-section">
+            <img src="/home2.jpg" alt="guide-image" />
+          </div>
+          <div className="right-section">
+            <div className="message-stroke">Get your guide :</div>
+            <div className="message-plain">Receive a free guide for your tour in the cyclades directly in your email box</div>
+            <div className="guide-form">
+              <label>Name</label>
+              <input type="text"></input>
+              <label>e-mail</label>
+              <input type="text"></input>
+              <button type="submit">GET THE GUIDE</button>
+            </div>
+          </div>
+        </>}
     </div>
   </>
 );}
