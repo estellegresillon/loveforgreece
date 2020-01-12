@@ -14,13 +14,10 @@ const Header = () => (
     </div>
     <div className="navigation">
       <div className="nav-item">
-        SECTION ONE
+        WHAT TO DO
       </div>
       <div className="nav-item">
-        SECTION TWO
-      </div>
-      <div className="nav-item">
-        SECTION THREE
+        GET THE GUIDE
       </div>
     </div>
   </div>

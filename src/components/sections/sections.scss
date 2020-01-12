@@ -1,16 +1,174 @@
 $dark-blue: #0f63e2;
+$blue: #59cbff;
 $light-pink: #ffe2e7;
+$pink: #ffc0cb;
 
-#section-one, #section-two {
+#section-one {
   display: flex;
   flex-direction: column;
   position: relative;
   align-items: center;
   justify-content: center;
-  width: 120vw;
-  left: -10vw;
-  height: 100vh;
+  text-align: center;
+  width: 100vw;
+  height: 110vh;
+  color: #fff;
+  background: url("/home3.jpg") no-repeat;
+  background-size: cover;
+
+  .image-locations {
+    display: flex;
+    width: 80%;
+    text-transform: uppercase;
+    font-weight: 900;
+    height: 100%;
+    justify-content: space-between;
+    
+
+    .locations {
+      position: relative;
+      width: 10%;
+
+      .location-text { padding: 0 5px; }
+
+      .location-description { 
+        position: absolute;
+        font-size: 13px;
+        z-index: 1;
+        width: 150px;
+        background: #fff;
+        color: $dark-blue;
+        font-family: "Playfair Display", sans-serif;
+        display: none;
+        list-style: none;
+        text-transform: none;
+        font-weight: 400;
+        padding: 30px;
+        animation: 0.5s descriptionFadeIn;
+        animation-fill-mode: forwards;
+
+        li { 
+          opacity: 0;
+          margin-bottom: 20px;
+          animation: 1s fadeIn;
+          animation-fill-mode: forwards;
+          animation-delay: 0.5s;
+        }
+        li:last-child { margin-bottom: 0px; }
+      }
+
+      &:hover {
+        .location-description { display: block; }
+      }
+    }
+
+    .location-left {
+      margin-top: 30%;
+      height: 40%;
+      border-left: 1px solid $pink;
+      text-align: left;
+      transition: 0.5s all ease;
+
+      .location-text { 
+        background-color: $pink;
+        transition: 0.5s all ease;
+      }
+
+      .location-description { 
+        top: 10px;
+        left: 10px;
+      }
+    }
+
+    .location-center {
+      margin-top: 18%;
+      height: 25%;
+      border-right: 1px solid $dark-blue;
+      text-align: right;
+
+      .location-text { 
+        background-color: $dark-blue;
+        transition: 0.5s all ease;
+      }
+
+      .location-description { 
+        top: 10px;
+        right: 10px;
+      }
+    }
+
+    .location-right {
+      margin-top: 27%;
+      height: 32%;
+      border-right: 1px solid $blue;
+      text-align: right;
+
+      .location-text { 
+        background-color: $blue;
+        transition: 0.5s all ease;
+      }
+
+      .location-description { 
+        top: 10px;
+        right: 10px;
+      }
+    }
+  }
+
+  .message-stroke {
+    position: absolute;
+    bottom: 15%;
+    background-color: $pink;
+    padding: 0px 25px 5px 15px;
+    animation: 1s fadeInTitle;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+}
+
+#section-two {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: calc(100vw - 40%);
+  height: 110vh;
   color: $dark-blue;
+  padding: 0 20%;
+
+  .pink-waves {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation: 1s fadeInPinkWave;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+
+  .blue-waves {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    animation: 1s fadeInBlueWave;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+
+  .message-plain {
+    animation: 1s fadeIn;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+  }
+
+  .message-stroke {
+    animation: 1s fadeIn;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+  }
 }
 
 #section-three {
@@ -19,55 +177,35 @@ $light-pink: #ffe2e7;
   position: relative;
   align-items: center;
   justify-content: center;
+  text-align: center;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   color: $dark-blue;
+
+  .message-plain {
+    font-size: 18px;
+    color: $dark-blue;
+    font-family: "Playfair Display", serif;
+  }
 }
 
 .message-stroke {
   font-weight: 900;
   font-style: italic;
-  font-size: 50px;
-  margin-top: -25px;
+  font-size: 52px;
   font-family: "Playfair Display", serif;
   -webkit-text-stroke-width: 1px;
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
 }
 
+.message-plain {
+  font-size: 36px;
+  color: $dark-blue;
+  font-family: "Playfair Display", serif;
+}
+
 #section-one, #section-three { background-color: $light-pink; }
 #section-two { background-color: #fff; }
-
-.bg-spin-up {
-  animation: bgSpinUp 4s ease;
-}
-
-@keyframes bgSpinUp {
-  from {
-    transform: rotate(0deg);
-  }
-  30% {
-    transform: rotate(5deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-
-.bg-spin-down {
-  animation: bgSpinDown 4s ease;
-}
-
-@keyframes bgSpinDown {
-  from {
-    transform: rotate(0deg);
-  }
-  30% {
-    transform: rotate(-5deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
 
 @keyframes fadeIn {
   from {
@@ -75,6 +213,39 @@ $light-pink: #ffe2e7;
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes fadeInTitle {
+  from {
+    opacity: 0;
+    bottom: 0%;
+  }
+  to {
+    opacity: 1;
+    bottom: 15%;
+  }
+}
+
+@keyframes fadeInPinkWave {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  to {
+    opacity: 1;
+    left: 10%;
+  }
+}
+
+@keyframes fadeInBlueWave {
+  from {
+    opacity: 0;
+    right: 0%;
+  }
+  to {
+    opacity: 1;
+    right: 10%;
   }
 }
 
@@ -99,9 +270,7 @@ $light-pink: #ffe2e7;
   }
 }
 
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes descriptionFadeIn {
+  from { width: 0; }
+  to { width: 150px; }
 }
- */

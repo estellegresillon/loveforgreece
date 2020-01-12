@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import "./cursors.scss";
 
@@ -9,30 +9,9 @@ import HeroScene from "./hero-scene/hero-scene";
 import Sections from "./sections/sections";
 import Footer from "./footer/footer";
 
-import { onScrollDirection, usePrevious } from "../helpers/scroll";
 import { onCursorMove, toggleCursor } from "../helpers/cursor";
 
 const App = () => {
-  //////////// SCROLL
-  const [count, setCount] = useState(0);
-  const prevCount = usePrevious(count)
-
-  useEffect(() => {
-    const sectionOne = document.getElementById("section-one");
-    const sectionTwo = document.getElementById("section-two");
-    if (count < prevCount) {
-      onScrollDirection(sectionOne, sectionTwo, "up");
-    } else if (count > prevCount) {
-      onScrollDirection(sectionOne, sectionTwo, "down");
-    }
-  }, [count, prevCount]);
-
-  useEffect(() => {
-    document.addEventListener("scroll", () => { setCount(window.pageYOffset) }, true);
-    return () => document.removeEventListener("scroll", () => { setCount(window.pageYOffset) }, true);
-  }, []);
-
-  //////////// CURSORS
   useEffect(() => {
     const app = document.querySelector(".app");
     const smallCursor = document.querySelector(".cursor-small");
