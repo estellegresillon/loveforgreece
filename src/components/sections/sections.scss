@@ -193,7 +193,7 @@ $pink: #ffc0cb;
     width: 50%;
     height: 100%;
     opacity: 0;
-    align-items: flex-start;
+    overflow: hidden;
     animation: 1s fadeInGuideImage;
     animation-fill-mode: forwards;
     animation-delay: 1s;
