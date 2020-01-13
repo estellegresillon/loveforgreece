@@ -8,8 +8,8 @@ const Footer = () => (
       <div className="logo">
         <span>
           <i className="fas fa-sun" />
-          <span style={{ fontWeight: 900 }}>DIVE</span>
-          <span>IN</span>
+          <span>DIVE</span>
+          <span style={{ fontWeight: 100 }}>IN</span>
         </span>
         SANTORINI
       </div>

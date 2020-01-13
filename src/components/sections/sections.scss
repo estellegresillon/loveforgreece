@@ -191,14 +191,17 @@ $pink: #ffc0cb;
     position: absolute;
     left: 0;
     width: 50%;
+    height: 100%;
     opacity: 0;
+    align-items: flex-start;
     animation: 1s fadeInGuideImage;
     animation-fill-mode: forwards;
     animation-delay: 1s;
 
     img {
-      height: 90vh;
-      width: auto;
+      height: auto;
+      max-height: 100%;
+      width: 100%;
     }
   }
 
@@ -210,11 +213,13 @@ $pink: #ffc0cb;
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 40%;
-    padding: 5%;
+    width: 36%;
+    padding: 7%;
     opacity: 0;
     animation: 1s fadeInGuideForm;
     animation-fill-mode: forwards;
+
+    .message-stroke, .message-plain { color: #0e207b; }
 
     .guide-form {
       display: flex;
@@ -237,6 +242,7 @@ $pink: #ffc0cb;
       label {
         text-transform: capitalize;
         font-size: 12px;
+        color: #0e207b;
       }
 
       button {
