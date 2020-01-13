@@ -53,3 +53,14 @@ $blue: #59cbff;
     }
   }
 }
+
+@media screen and (max-width: 728px) {
+  .header {
+    .navigation {
+      .nav-item { 
+        font-size: 10px;
+        margin-left: 20px;
+      }
+    }
+  }
+}

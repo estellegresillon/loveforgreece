@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import "./sections.scss";
+import "./sections-mobile.scss";
 
 const Sections = () => {
   const [isSectionOneVisible, setSectionOneVisible] = useState(false);

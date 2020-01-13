@@ -57,3 +57,13 @@ $blue: #59cbff;
     animation: 2s cursorTap infinite;
   }
 }
+
+@media screen and (max-width: 728px) {
+  #hero-scene {
+    .message { font-size: 64px; }
+    .message-stroke { 
+      font-size: 42px;
+      margin-top: 0;
+    }
+  }
+}
