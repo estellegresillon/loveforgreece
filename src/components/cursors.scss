@@ -4,8 +4,8 @@ $orange: #ffb350;
 
 .cursor {
   position: absolute;
-  width: 240px;
-  height: 240px;
+  width: 280px;
+  height: 280px;
   top: 0;
   left: 0;
   background: $orange;
@@ -18,7 +18,7 @@ $orange: #ffb350;
 }
 
 .cursor-small {
-  position: absolute;
+  position: fixed;
   width: 20px;
   height: 20px;
   top: 0;
