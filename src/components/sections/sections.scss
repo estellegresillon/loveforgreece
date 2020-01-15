@@ -1,4 +1,4 @@
-$dark-blue: #0f63e2;
+$dark-blue: #0e207b;
 $blue: #59cbff;
 $light-pink: #ffe2e7;
 $pink: #ffc0cb;
@@ -31,6 +31,11 @@ $pink: #ffc0cb;
 
       .location-text { padding: 0 5px; }
 
+      i {
+        position: absolute;
+        border-radius: 50%;
+      }
+
       .location-description { 
         position: absolute;
         font-size: 13px;
@@ -44,6 +49,7 @@ $pink: #ffc0cb;
         text-transform: none;
         font-weight: 400;
         padding: 30px;
+        height: 130px;
         animation: 0.5s descriptionFadeIn;
         animation-fill-mode: forwards;
 
@@ -78,6 +84,13 @@ $pink: #ffc0cb;
         top: 10px;
         left: 10px;
       }
+
+      i {
+        background-color: $pink;
+        top: 25px;
+        left: 10px;
+        padding: 5px;
+      }
     }
 
     .location-center {
@@ -95,6 +108,13 @@ $pink: #ffc0cb;
         top: 10px;
         right: 10px;
       }
+
+      i {
+        background-color: $dark-blue;
+        top: 25px;
+        right: 10px;
+        padding: 5px;
+      }
     }
 
     .location-right {
@@ -111,6 +131,13 @@ $pink: #ffc0cb;
       .location-description { 
         top: 10px;
         right: 10px;
+      }
+
+      i {
+        background-color: $blue;
+        top: 25px;
+        right: 10px;
+        padding: 5px;
       }
     }
   }
@@ -197,6 +224,7 @@ $pink: #ffc0cb;
     animation: 1s fadeInGuideImage;
     animation-fill-mode: forwards;
     animation-delay: 1s;
+    transition: 1s all ease;
 
     img {
       height: auto;
@@ -218,8 +246,9 @@ $pink: #ffc0cb;
     opacity: 0;
     animation: 1s fadeInGuideForm;
     animation-fill-mode: forwards;
+    transition: 1s all ease;
 
-    .message-stroke, .message-plain { color: #0e207b; }
+    .message-stroke, .message-plain { color: $dark-blue; }
 
     .guide-form {
       display: flex;
@@ -325,7 +354,7 @@ $pink: #ffc0cb;
 @keyframes fadeInGuideImage {
   from {
     opacity: 0;
-    margin-left: -100%;
+    margin-left: -10%;
   }
   to {
     opacity: 1;
@@ -336,7 +365,7 @@ $pink: #ffc0cb;
 @keyframes fadeInGuideForm {
   from {
     opacity: 0;
-    margin-right: -100%;
+    margin-right: -10%;
   }
   to {
     opacity: 1;

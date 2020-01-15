@@ -14,19 +14,19 @@ const Sections = () => {
 
     if (view > windowHeight) {
       setSectionOneVisible(true);
-    } else if (view + 200 < windowHeight) {
+    } else if (view < (windowHeight - 200)) {
       setSectionOneVisible(false);
     }
 
-    if (view + 200 > (windowHeight * 2)) {
+    if (view > (windowHeight * 2)) {
       setSectionTwoVisible(true);
-    } else if (view + 200 < (windowHeight * 2)) {
+    } else if (view < windowHeight) {
       setSectionTwoVisible(false);
     }
 
-    if (view + 400 > (windowHeight * 3)) {
+    if (view > (windowHeight * 3)) {
       setSectionThreeVisible(true);
-    } else if (view + 400 < (windowHeight * 3)) {
+    } else if (view < (windowHeight * 2)) {
       setSectionThreeVisible(false);
     }
   }
@@ -42,6 +42,7 @@ const Sections = () => {
         <div className="image-locations">
           <div className="locations location-left">
             <div className="location-text">Fira</div>
+            <i className="fas fa-ellipsis-h" />
             <ul className="location-description">
               <li>Climb the Caldeira</li>
               <li>Catch the cable car</li>
@@ -52,6 +53,7 @@ const Sections = () => {
 
           <div className="locations location-center">
             <div className="location-text">Oia</div>
+            <i className="fas fa-ellipsis-h" />
             <ul className="location-description">
               <li>Byzantine castle ruins</li>
               <li>Ammoudi</li>
@@ -62,6 +64,7 @@ const Sections = () => {
 
           <div className="locations location-right">
             <div className="location-text">Thera</div>
+            <i className="fas fa-ellipsis-h" />
             <ul className="location-description">
               <li>Archeological museum</li>
               <li>Walk through Thera</li>
