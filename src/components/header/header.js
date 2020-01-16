@@ -3,13 +3,9 @@ import React from "react";
 import "./header.scss";
 
 const Header = () => {
-  const goToSection = (section) => {
-    const sectionOne = document.getElementById("section-one");
-    const sectionThree = document.getElementById("section-three");
-
-    if (section === "one") {
-      sectionOne.scrollIntoView();
-    } else sectionThree.scrollIntoView();
+  const goToSection = (div) => {
+    const section = document.getElementById(div);
+    section.scrollIntoView();
   }
 
   return (
@@ -23,11 +19,14 @@ const Header = () => {
         SANTORINI
       </div>
       <div className="navigation">
-        <div onClick={() => goToSection("one")} className="nav-item">
+        <div onClick={() => goToSection("section-one")} className="nav-item">
           WHAT TO DO
         </div>
-        <div onClick={() => goToSection("three")} className="nav-item">
+        <div onClick={() => goToSection("section-three")} className="nav-item">
           GET THE GUIDE
+        </div>
+        <div onClick={() => goToSection("section-four")} className="nav-item">
+          SAY HELLO
         </div>
       </div>
     </div >
