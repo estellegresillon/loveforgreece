@@ -7,6 +7,7 @@ const Sections = () => {
   const [isSectionOneVisible, setSectionOneVisible] = useState(false);
   const [isSectionTwoVisible, setSectionTwoVisible] = useState(false);
   const [isSectionThreeVisible, setSectionThreeVisible] = useState(false);
+  const [isSectionFourVisible, setSectionFourVisible] = useState(false);
 
   const triggerImage = () => {
     const windowHeight = window.innerHeight;
@@ -24,10 +25,16 @@ const Sections = () => {
       setSectionTwoVisible(false);
     }
 
-    if (view > (windowHeight * 3)) {
+    if (view > (windowHeight * 2.5)) {
       setSectionThreeVisible(true);
     } else if (view < (windowHeight * 2)) {
       setSectionThreeVisible(false);
+    }
+
+    if (view > (windowHeight * 3.2)) {
+      setSectionFourVisible(true);
+    } else if (view < (windowHeight * 2)) {
+      setSectionFourVisible(false);
     }
   }
 
@@ -105,6 +112,17 @@ const Sections = () => {
             </div>
           </>}
       </div>
+
+      <div id="section-four">
+        {isSectionFourVisible &&
+          <>
+            <img className="blue-waves" width="200px" src="/pink-waves.svg" alt="wave" />
+            <div className="message-plain">DiveInSantorini is a crew active on social. Check our instagram or just greet us :</div>
+            <button className="social-media-button">HELLO</button>
+          </>}
+      </div>
+
+      <div className="parallax" />
     </>
   );
 }

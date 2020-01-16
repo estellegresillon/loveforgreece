@@ -153,7 +153,7 @@ $pink: #ffc0cb;
   }
 }
 
-#section-two {
+#section-two, #section-four {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -291,6 +291,15 @@ $pink: #ffc0cb;
   }
 }
 
+.parallax {
+  height: 70vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/home-min.jpg");
+}
+
 .message-stroke {
   font-weight: 900;
   font-style: italic;
@@ -307,7 +316,26 @@ $pink: #ffc0cb;
 }
 
 #section-one, #section-three { background-color: $light-pink; }
-#section-two { background-color: #fff; }
+#section-two, #section-four { background-color: #fff; }
+
+#section-four { 
+  height: 70vh;
+
+  .social-media-button {
+    font-weight: 900;
+    border: none;
+    padding: 15px 20px;
+    color: white;
+    background-color: $blue;
+    font-size: 13px;
+    transition: 0.5s all ease;
+    outline: none;
+    cursor: none;
+    margin-top: 30px;
+
+    &:hover { background-color: $dark-blue; }
+  }
+}
 
 @keyframes fadeIn {
   from {
