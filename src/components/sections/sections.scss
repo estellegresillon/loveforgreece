@@ -326,12 +326,15 @@ $pink: #ffc0cb;
     border: none;
     padding: 15px 20px;
     color: white;
+    z-index: 1;
     background-color: $blue;
     font-size: 13px;
     transition: 0.5s all ease;
     outline: none;
     cursor: none;
     margin-top: 30px;
+
+    .blue-waves { z-index: 0; }
 
     &:hover { background-color: $dark-blue; }
   }
