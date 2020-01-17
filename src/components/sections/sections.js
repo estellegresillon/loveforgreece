@@ -97,7 +97,7 @@ const Sections = () => {
         {isSectionThreeVisible &&
           <>
             <div className="left-section">
-              <img src="/home2-min.jpg" alt="guide-overview" />
+              <img src="/home2.webp" alt="guide-overview" />
             </div>
             <div className="right-section">
               <div className="message-stroke">Get your guide :</div>
