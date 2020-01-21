@@ -220,12 +220,7 @@ $pink: #ffc0cb;
     left: 0;
     width: 50%;
     height: 100%;
-    opacity: 0;
     overflow: hidden;
-    animation: 1s fadeInGuideImage;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-    transition: 1s all ease;
 
     .wrapper-img {
       height: 100%;
@@ -384,17 +379,6 @@ $pink: #ffc0cb;
   to {
     opacity: 1;
     right: 10%;
-  }
-}
-
-@keyframes fadeInGuideImage {
-  from {
-    opacity: 0;
-    margin-left: -10%;
-  }
-  to {
-    opacity: 1;
-    margin-right: 0;
   }
 }
 
