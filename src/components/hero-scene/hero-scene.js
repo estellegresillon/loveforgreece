@@ -5,9 +5,12 @@ import "./hero-scene.scss";
 const HeroScene = () => (
   <div id="hero-scene">
     <div className="cursor"></div>
-    <div className="message">Visit our islands</div>
-    <div className="message-stroke">- The Cyclades & the Egee sea -</div>
-    <i className="far fa-arrow-alt-circle-down" />
+    <div className="message-pink">WELCOME TO SANTORINI</div>
+    <div className="title">The Cyclades & the Egee sea</div>
+    <div className="subtitle">
+      Visit our islands
+      <i className="fas fa-arrow-right" />
+    </div>
   </div>
 );
 

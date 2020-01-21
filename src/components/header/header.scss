@@ -1,5 +1,4 @@
-$dark-blue: #0e207b;
-$blue: #59cbff;
+$pink: #ffc0cb;
 
 @keyframes fadeInHome {
   from {
@@ -11,14 +10,14 @@ $blue: #59cbff;
 }
 
 .header {
-  position: fixed;
-  height: 15vh;
-  width: 100vw;
+  position: absolute;
+  height: 13vh;
+  width: 90vw;
   max-width: 100%;
-  box-sizing: border-box;
   z-index: 1;
   opacity: 0;
   display: flex;
+  border-bottom: 1px solid rgba(255,255,255, 0.7);
   align-items: center;
   justify-content: space-between;
   animation: 3s fadeInHome;
@@ -28,16 +27,14 @@ $blue: #59cbff;
   .logo {
     font-weight: 900;
     letter-spacing: -1px;
-    color: $blue;
-    margin-left: 5vw;
+    color: #fff;
 
     span { font-weight: 100; }
   }
 
   .navigation {
     display: flex;
-    margin-right: 5vw;
-    color: $blue;
+    color: #fff;
 
     .nav-item {
       font-weight: 900;
@@ -48,7 +45,7 @@ $blue: #59cbff;
       text-decoration: none;
 
       &:hover {
-        color: $dark-blue;
+        color: $pink;
       }
     }
   }

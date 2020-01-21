@@ -1,5 +1,5 @@
-$dark-blue: #0e207b;
 $blue: #59cbff;
+$pink: #ffc0cb;
 
 @keyframes fadeInHome {
   from {
@@ -15,47 +15,68 @@ $blue: #59cbff;
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-end;
   width: calc(100vw - 80px);
   height: 100vh;
-  max-width: 100%;
-  box-sizing: border-box;
-  cursor: none;
-  touch-action: none;
-  background-color: #fff;
-  overflow: hidden;
-  text-align: center;
-  margin: 0 40px;
+  width: 90vw;
+  padding: 0 5vw;
+  background: url("/hero2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   animation: 3s fadeInHome;
   animation-delay: 2.5s;
   animation-fill-mode: forwards;
-
-  .message {
+  
+  .message-pink {
+    letter-spacing: 5px;
     font-weight: 900;
-    font-size: 94px;
-    color: #0f63e2;
-    font-family: "Playfair Display", serif;
+    color: $pink;
   }
 
-  .message-stroke {
-    font-weight: 900;
-    font-style: italic;
+  .title {
+    font-weight: 700;
     font-size: 72px;
-    margin-top: -25px;
+    width: 50%;
+    margin-top: 10px;
+    color: #fff;
     font-family: "Playfair Display", serif;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke-color: $dark-blue;
   }
 
-  i {
-    position: absolute;
-    color: $blue;
-    bottom: 4vh;
-    font-size: 32px;
-    animation: 2s cursorTap infinite;
+  .subtitle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    color: #fff;
+    background: $blue;
+    margin-top: 40px;
+    margin-bottom: 13vh;
+    border-radius: 30px;
+
+    i {
+      color: #fff;
+      font-size: 20px;
+      margin-left: 15px;
+    }
   }
+
+  // .message-stroke-big {
+  //   font-weight: 900;
+  //   font-style: italic;
+  //   font-size: 72px;
+  //   margin-top: -25px;
+  //   font-family: "Playfair Display", serif;
+  //   -webkit-text-stroke-width: 1px;
+  //   -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  //   -webkit-text-stroke-color: #fff;
+  // }
 }
 
 @media screen and (max-width: 728px) {

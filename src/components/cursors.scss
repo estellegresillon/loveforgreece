@@ -1,21 +1,4 @@
-$dark-blue: #0e207b;
 $blue: rgb(89, 203, 255);
-$orange: #ffb350;
-
-.cursor {
-  position: absolute;
-  width: 280px;
-  height: 280px;
-  top: 0;
-  left: 0;
-  background: $orange;
-  border-radius: 80%;
-  border: 160px solid $dark-blue;
-  backface-visibility: hidden;
-  pointer-events: none;
-  opacity: 1;
-  mix-blend-mode: screen;
-}
 
 .cursor-small {
   position: fixed;
