@@ -33,7 +33,7 @@ $pink: #ffc0cb;
     height: 100%;
     width: 100%;
     z-index: -998;
-    background: url("/water.jpg");
+    background: url("/water-home.jpg");
     background-size: cover;
 
     .background-water-mask {
@@ -43,7 +43,7 @@ $pink: #ffc0cb;
       height: 100%;
       width: 100%;
       z-index: -999;
-      background: url("/water.jpg");
+      background: url("/water-home.jpg");
       background-size: cover;
       filter: url("#turbulence");
     }
