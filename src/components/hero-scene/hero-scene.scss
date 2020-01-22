@@ -21,14 +21,33 @@ $pink: #ffc0cb;
   height: 100vh;
   width: 90vw;
   padding: 0 5vw;
-  background: url("/hero2.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  
   animation: 3s fadeInHome;
   animation-delay: 2.5s;
   animation-fill-mode: forwards;
+
+  .background-water {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -998;
+    background: url("/water.jpg");
+    background-size: cover;
+
+    .background-water-mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -999;
+      background: url("/water.jpg");
+      background-size: cover;
+      filter: url("#turbulence");
+    }
+  }
   
   .message-pink {
     letter-spacing: 5px;
