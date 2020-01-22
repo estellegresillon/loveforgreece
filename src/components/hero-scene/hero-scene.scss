@@ -27,6 +27,12 @@ $pink: #ffc0cb;
   animation-delay: 2.5s;
   animation-fill-mode: forwards;
 
+  .white-waves {
+    position: absolute;
+    bottom: 5vh;
+    right: 8vh;
+  }
+
   .background {
     position: absolute;
     top: 0;
@@ -89,7 +95,7 @@ $pink: #ffc0cb;
     top: 45%;
     align-items: center;
     font-weight: 900;
-    font-size: 14px;
+    font-size: 18px;
     letter-spacing: 3px;
     text-transform: uppercase;
     padding: 15px 25px;
@@ -107,7 +113,7 @@ $pink: #ffc0cb;
     i {
       color: #fff;
       font-size: 20px;
-      margin-left: 15px;
+      margin-left: 10px;
     }
   }
 

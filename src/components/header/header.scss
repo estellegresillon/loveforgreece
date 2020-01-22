@@ -22,6 +22,7 @@ $pink: #ffc0cb;
   opacity: 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   animation: 3s fadeInHome;
   animation-delay: 2.5s;
   animation-fill-mode: forwards;
@@ -37,6 +38,7 @@ $pink: #ffc0cb;
 
   .navigation {
     display: flex;
+    color: #fff;
 
     .nav-item {
       font-weight: 900;

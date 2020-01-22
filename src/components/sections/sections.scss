@@ -27,9 +27,9 @@ $pink: #ffc0cb;
 
     .locations {
       position: relative;
-      width: 10%;
+      width: 15%;
 
-      .location-text { padding: 0 5px; }
+      .location-text { padding: 10px 15px; }
 
       i {
         position: absolute;
@@ -68,6 +68,11 @@ $pink: #ffc0cb;
       }
     }
 
+    i {
+      top: 47px;
+      padding: 5px;
+    }
+
     .location-left {
       margin-top: 30%;
       height: 40%;
@@ -81,15 +86,13 @@ $pink: #ffc0cb;
       }
 
       .location-description { 
-        top: 10px;
+        top: 34px;
         left: 10px;
       }
 
       i {
         background-color: $pink;
-        top: 25px;
         left: 10px;
-        padding: 5px;
       }
     }
 
@@ -105,15 +108,13 @@ $pink: #ffc0cb;
       }
 
       .location-description { 
-        top: 10px;
+        top: 34px;
         right: 10px;
       }
 
       i {
         background-color: $dark-blue;
-        top: 25px;
         right: 10px;
-        padding: 5px;
       }
     }
 
@@ -129,15 +130,13 @@ $pink: #ffc0cb;
       }
 
       .location-description { 
-        top: 10px;
+        top: 34px;
         right: 10px;
       }
 
       i {
         background-color: $blue;
-        top: 25px;
         right: 10px;
-        padding: 5px;
       }
     }
   }
@@ -335,5 +334,16 @@ $pink: #ffc0cb;
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes descriptionFadeIn {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 150px;
   }
 }
