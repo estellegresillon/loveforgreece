@@ -147,7 +147,6 @@ $pink: #ffc0cb;
     bottom: 15%;
     background-color: $pink;
     padding: 0px 25px 5px 15px;
-    animation: 1s fadeInTitle;
     opacity: 0;
     animation-fill-mode: forwards;
   }
@@ -165,36 +164,20 @@ $pink: #ffc0cb;
   color: $dark-blue;
   padding: 0 20%;
 
+  .section-one-anchor, .section-four-anchor {
+    opacity: 0;
+  }
+
   .pink-waves {
     position: absolute;
     top: 10%;
     left: 10%;
-    animation: 1s fadeInPinkWave;
-    opacity: 0;
-    animation-fill-mode: forwards;
   }
 
   .blue-waves {
     position: absolute;
     bottom: 10%;
     right: 10%;
-    animation: 1s fadeInBlueWave;
-    opacity: 0;
-    animation-fill-mode: forwards;
-  }
-
-  .message-plain {
-    animation: 1s fadeIn;
-    opacity: 0;
-    animation-fill-mode: forwards;
-    animation-delay: 0.5s;
-  }
-
-  .message-stroke {
-    animation: 1s fadeIn;
-    opacity: 0;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
   }
 }
 
@@ -221,6 +204,7 @@ $pink: #ffc0cb;
     width: 50%;
     height: 100%;
     overflow: hidden;
+    opacity: 0;
 
     .wrapper-img {
       height: 100%;
@@ -243,9 +227,6 @@ $pink: #ffc0cb;
     width: 36%;
     padding: 7%;
     opacity: 0;
-    animation: 1s fadeInGuideForm;
-    animation-fill-mode: forwards;
-    transition: 1s all ease;
 
     .message-stroke, .message-plain { color: $dark-blue; }
 
@@ -340,6 +321,12 @@ $pink: #ffc0cb;
   }
 }
 
+.transition-on {
+  animation: 2s fadeIn;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -347,54 +334,4 @@ $pink: #ffc0cb;
   to {
     opacity: 1;
   }
-}
-
-@keyframes fadeInTitle {
-  from {
-    opacity: 0;
-    bottom: 0%;
-  }
-  to {
-    opacity: 1;
-    bottom: 15%;
-  }
-}
-
-@keyframes fadeInPinkWave {
-  from {
-    opacity: 0;
-    left: 0%;
-  }
-  to {
-    opacity: 1;
-    left: 10%;
-  }
-}
-
-@keyframes fadeInBlueWave {
-  from {
-    opacity: 0;
-    right: 0%;
-  }
-  to {
-    opacity: 1;
-    right: 10%;
-  }
-}
-
-@keyframes fadeInGuideForm {
-  from {
-    opacity: 0;
-    margin-right: -10%;
-  }
-  to {
-    opacity: 1;
-    margin-right: 0;
-  }
-}
-
-
-@keyframes descriptionFadeIn {
-  from { width: 0; }
-  to { width: 150px; }
 }

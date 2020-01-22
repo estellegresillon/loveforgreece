@@ -1,58 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Waypoint } from 'react-waypoint';
 
 import "./sections.scss";
 import "./sections-mobile.scss";
 
 const Sections = () => {
-  const [isSectionOneVisible, setSectionOneVisible] = useState(false);
-  const [isSectionTwoVisible, setSectionTwoVisible] = useState(false);
-  const [isSectionThreeVisible, setSectionThreeVisible] = useState(false);
-  const [isSectionFourVisible, setSectionFourVisible] = useState(false);
-
-  const triggerImage = () => {
-    const windowHeight = window.innerHeight;
-    const view = window.pageYOffset;
-
-    if (view > windowHeight) {
-      setSectionOneVisible(true);
-    } else if (view < (windowHeight - 200)) {
-      setSectionOneVisible(false);
-    }
-
-    if (view > (windowHeight * 2)) {
-      setSectionTwoVisible(true);
-    } else if (view < windowHeight) {
-      setSectionTwoVisible(false);
-    }
-
-    if (view > (windowHeight * 2.5)) {
-      setSectionThreeVisible(true);
-    } else if (view < (windowHeight * 2)) {
-      setSectionThreeVisible(false);
-    }
-
-    if (view > (windowHeight * 3.2)) {
-      setSectionFourVisible(true);
-    } else if (view < (windowHeight * 2)) {
-      setSectionFourVisible(false);
-    }
+  const handleWaypointEnter = (div) => {
+    const el = document.querySelector(div);
+    el.classList.add("transition-on");
   }
 
-  useEffect(() => {
-    window.addEventListener("scroll", triggerImage, false);
-    return () => window.removeEventListener("scroll", triggerImage, false);
-  }, [])
+  const handleWaypointLeave = (div) => {
+    const el = document.querySelector(div);
+    el.classList.remove("transition-on");
+  }
 
   return (
     <>
       <div id="section-one">
-        {isSectionOneVisible &&
-          <>
+        <Waypoint
+          onEnter={() => handleWaypointEnter(".section-one-anchor")}
+          onLeave={() => handleWaypointLeave(".section-one-anchor")}
+        >
+          <div className="section-one-anchor">
             <img className="pink-waves" width="200px" src="/pink-waves.svg" alt="wave" />
             <img className="blue-waves" width="200px" src="/blue-waves.svg" alt="wave" />
             <div className="message-plain">Discover the deep waters, the breathtaking cliffs, the shiny black sands and the romantic pink skies.</div>
             <div className="message-stroke">Santorini is a miracle of nature</div>
-          </>}
+          </div>
+        </Waypoint>
       </div>
       <div id="section-two">
         <div className="image-locations">
@@ -89,36 +65,52 @@ const Sections = () => {
             </ul>
           </div>
         </div>
-        {isSectionTwoVisible && <div className="message-stroke">what to see, what to do</div>}
+        <Waypoint
+          onEnter={() => handleWaypointEnter(".section-two-anchor")}
+          onLeave={() => handleWaypointLeave(".section-two-anchor")}
+        >
+          <div className="section-two-anchor message-stroke">what to see, what to do</div>
+        </Waypoint>
       </div>
 
       <div id="section-three">
-        {isSectionThreeVisible &&
-          <>
-            <div className="left-section">
-              <div className="wrapper-img" />
+        <Waypoint
+          onEnter={() => handleWaypointEnter(".section-three-left")}
+          onLeave={() => handleWaypointLeave(".section-three-left")}
+        >
+          <div className="section-three-left left-section">
+            <div className="wrapper-img" />
+          </div>
+        </Waypoint>
+        <Waypoint
+          onEnter={() => handleWaypointEnter(".section-three-right")}
+          onLeave={() => handleWaypointLeave(".section-three-right")}
+        >
+          <div className="section-three-right right-section">
+            <div className="message-stroke">Get your guide :</div>
+            <div className="message-plain">Receive a free guide for your tour in the cyclades directly in your email box</div>
+            <div className="guide-form">
+              <label>Name</label>
+              <input type="text"></input>
+              <label>e-mail</label>
+              <input type="text"></input>
+              <button type="submit">GET THE GUIDE</button>
             </div>
-            <div className="right-section">
-              <div className="message-stroke">Get your guide :</div>
-              <div className="message-plain">Receive a free guide for your tour in the cyclades directly in your email box</div>
-              <div className="guide-form">
-                <label>Name</label>
-                <input type="text"></input>
-                <label>e-mail</label>
-                <input type="text"></input>
-                <button type="submit">GET THE GUIDE</button>
-              </div>
-            </div>
-          </>}
+          </div>
+        </Waypoint>
       </div>
 
       <div id="section-four">
-        {isSectionFourVisible &&
-          <>
+        <Waypoint
+          onEnter={() => handleWaypointEnter(".section-four-anchor")}
+          onLeave={() => handleWaypointLeave(".section-four-anchor")}
+        >
+          <div className="section-four-anchor">
             <img className="blue-waves" width="200px" src="/pink-waves.svg" alt="wave" />
             <div className="message-plain">DiveInSantorini is a crew active on social media. Check our instagram or just greet us :</div>
             <button className="social-media-button">HELLO</button>
-          </>}
+          </div>
+        </Waypoint>
       </div>
 
       <div className="parallax" />

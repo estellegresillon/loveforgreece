@@ -20,4 +20,23 @@ $blue: #59cbff;
   background-color: #fff;
   color: $blue;
   font-weight: 900;
+
+  .logo-anchor {
+    opacity: 0;
+  }
+}
+
+.transition-on {
+  animation: 2s fadeIn;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
