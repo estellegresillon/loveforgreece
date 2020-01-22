@@ -1,4 +1,8 @@
 $pink: #ffc0cb;
+$dark-blue: #0e207b;
+$blue: #59cbff;
+$light-pink: #ffe2e7;
+$pink: #ffc0cb;
 
 @keyframes fadeInHome {
   from {
@@ -12,29 +16,27 @@ $pink: #ffc0cb;
 .header {
   position: absolute;
   height: 13vh;
-  width: 90vw;
+  width: 86vw;
   max-width: 100%;
   z-index: 1;
   opacity: 0;
   display: flex;
-  border-bottom: 1px solid rgba(255,255,255, 0.7);
   align-items: center;
-  justify-content: space-between;
   animation: 3s fadeInHome;
   animation-delay: 2.5s;
   animation-fill-mode: forwards;
+  color: $dark-blue;
 
   .logo {
     font-weight: 900;
     letter-spacing: -1px;
-    color: #fff;
+    margin-right: 50px;
 
     span { font-weight: 100; }
   }
 
   .navigation {
     display: flex;
-    color: #fff;
 
     .nav-item {
       font-weight: 900;

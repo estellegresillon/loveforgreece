@@ -201,7 +201,7 @@ $pink: #ffc0cb;
   .left-section {
     position: absolute;
     left: 0;
-    width: 50%;
+    width: 40%;
     height: 100%;
     overflow: hidden;
     opacity: 0;
@@ -224,7 +224,7 @@ $pink: #ffc0cb;
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 36%;
+    width: 46%;
     padding: 7%;
     opacity: 0;
 
@@ -236,7 +236,7 @@ $pink: #ffc0cb;
       align-items: center;
       justify-content: center;
       text-align: center;
-      width: 100%;
+      width: 80%;
 
       input {
         width: calc(100% - 15px);
@@ -266,7 +266,8 @@ $pink: #ffc0cb;
         outline: none;
         cursor: none;
 
-        &:hover { background-color: $dark-blue; }
+        &:hover { background-color: #24a7ff; }
+        &:active { background-color: $dark-blue; }
       }
     }
   }
@@ -317,7 +318,8 @@ $pink: #ffc0cb;
 
     .blue-waves { z-index: 0; }
 
-    &:hover { background-color: $dark-blue; }
+    &:hover { background-color: #24a7ff; }
+    &:active { background-color: $dark-blue; }
   }
 }
 

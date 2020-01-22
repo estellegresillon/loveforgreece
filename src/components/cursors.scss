@@ -1,4 +1,5 @@
 $blue: rgb(89, 203, 255);
+$dark-blue: #0e207b;
 
 .cursor-small {
   position: fixed;
@@ -6,11 +7,12 @@ $blue: rgb(89, 203, 255);
   height: 20px;
   top: 0;
   left: 0;
-  background: $blue;
+  background: $dark-blue;
   border-radius: 80%;
   backface-visibility: hidden;
   pointer-events: none;
   opacity: 1;
+  mix-blend-mode: darken;
   z-index: 999;
   animation: 1s fadeIn ease;
   animation-delay: 2.5s;

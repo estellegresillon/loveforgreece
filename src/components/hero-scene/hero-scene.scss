@@ -1,4 +1,6 @@
+$dark-blue: #0e207b;
 $blue: #59cbff;
+$light-pink: #ffe2e7;
 $pink: #ffc0cb;
 
 @keyframes fadeInHome {
@@ -19,67 +21,88 @@ $pink: #ffc0cb;
   justify-content: flex-end;
   width: calc(100vw - 80px);
   height: 100vh;
-  width: 90vw;
-  padding: 0 5vw;
+  width: 86vw;
+  padding: 0 7vw;
   animation: 3s fadeInHome;
   animation-delay: 2.5s;
   animation-fill-mode: forwards;
 
-  .background-water-mask {
+  .background {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: -998;
-    background: url("/water-home-mask.png");
-    background-size: cover;
-    background-attachment: fixed;
+    z-index: -2;
+
+    .blue {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 50%;
+      background-color: $blue;
+      background: url("/hero2.jpg");
+      background-size: cover;
+      background-position: right;
+    }
   }
 
-  .background-water {
+  .hero-image {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -999;
-    background: url("/water-home.jpg");
+    top: 13vh;
+    left: 7vw;
+    height: 74vh;
+    width: 60vw;
+    z-index: -1;
+    background: url("/hero.jpg");
     background-size: cover;
-    background-attachment: fixed;
-    filter: url("#turbulence");
-  }
-  
-  .message-pink {
-    letter-spacing: 5px;
-    font-weight: 900;
-    color: $pink;
   }
 
-  .title {
-    font-weight: 700;
-    font-size: 80px;
-    line-height: 82px;
-    width: 55%;
-    margin-top: 20px;
-    color: #fff;
-    font-family: "Playfair Display", serif;
+  .hero-scene-text {
+    position: absolute;
+    bottom: 19vh;
+    margin-left: 50px;
+
+    .message-pink {
+      letter-spacing: 5px;
+      font-weight: 900;
+      color: $pink;
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 80px;
+      line-height: 82px;
+      width: 55%;
+
+      margin-top: 20px;
+      color: #fff;
+      font-family: "Playfair Display", serif;
+    }
   }
 
-  .subtitle {
-    position: relative;
+  .button-go {
+    position: absolute;
     display: flex;
+    right: calc(33vw - 50px);
+    top: 45%;
     align-items: center;
     font-weight: 900;
     font-size: 14px;
     letter-spacing: 3px;
     text-transform: uppercase;
     padding: 15px 25px;
+    width: 50px;
     color: #fff;
-    background: $blue;
+    background-color: $blue;
     margin-top: 40px;
-    margin-bottom: 13vh;
+    margin-bottom: 18vh;
     border-radius: 30px;
+    transition: 1s all ease;
+
+    &:hover { background-color: #24a7ff; }
+    &:active { background-color: $dark-blue; }
 
     i {
       color: #fff;
@@ -88,11 +111,16 @@ $pink: #ffc0cb;
     }
   }
 
-  // .message-stroke-big {
+  // .message-stroke {
+  //   position: absolute;
   //   font-weight: 900;
+  //   top: 30vh;
+  //   width: 25vw;
+  //   right: 6vw;
+  //   opacity: 0.8;
+  //   font-size: 120px;
+  //   line-height: 100px;
   //   font-style: italic;
-  //   font-size: 72px;
-  //   margin-top: -25px;
   //   font-family: "Playfair Display", serif;
   //   -webkit-text-stroke-width: 1px;
   //   -webkit-text-fill-color: rgba(0, 0, 0, 0);
