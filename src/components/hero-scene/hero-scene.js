@@ -12,9 +12,8 @@ const HeroScene = () => (
         Visit our islands
         <i className="fas fa-arrow-right" />
       </div>
-      <div className="background-water">
-        <div className="background-water-mask" />
-      </div>
+      <div className="background-water-mask" />
+      <div className="background-water" />
     </div>
     <svg>
       <filter id="turbulence" x="0" y="0" width="100%">

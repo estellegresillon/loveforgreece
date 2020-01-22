@@ -25,29 +25,29 @@ $pink: #ffc0cb;
   animation-delay: 2.5s;
   animation-fill-mode: forwards;
 
-  .background-water {
+  .background-water-mask {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     z-index: -998;
+    background: url("/water-home-mask.png");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .background-water {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -999;
     background: url("/water-home.jpg");
     background-size: cover;
     background-attachment: fixed;
-
-    .background-water-mask {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      z-index: -999;
-      background: url("/water-home-mask.png");
-      background-size: cover;
-      background-attachment: fixed;
-      filter: url("#turbulence");
-    }
+    filter: url("#turbulence");
   }
   
   .message-pink {
