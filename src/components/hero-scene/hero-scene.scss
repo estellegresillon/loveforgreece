@@ -122,19 +122,15 @@ $pink: #ffc0cb;
 
 @media screen and (max-width: 728px) {
   #hero-scene {
+    .button-go {
+      right: 57vw;
+      top: 78%;
+    }
+
     .message { font-size: 64px; }
     .message-stroke { 
       font-size: 42px;
       margin-top: 0;
-    }
-  }
-}
-
-@media screen and (max-width: 728px) {
-  #hero-scene {
-    .button-go {
-      right: 57vw;
-      top: 78%;
     }
 
     .hero-scene-text {
@@ -152,7 +148,8 @@ $pink: #ffc0cb;
     .white-waves {
       position: absolute;
       bottom: 2vh;
-      right: -9vh;
+      right: -20vh;
+      width: 50%;
     }
   }
 }

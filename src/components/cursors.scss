@@ -19,3 +19,7 @@ $dark-blue: #0e207b;
   animation-fill-mode: forwards;
   opacity: 0;
 }
+
+@media screen and (max-width: 728px) {
+  .cursor-small { display: none; }
+}

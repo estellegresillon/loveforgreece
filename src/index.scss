@@ -22,6 +22,10 @@ body {
   align-items: center;
 }
 
+@media screen and (max-width: 728px) {
+  .app { cursor: initial; }
+}
+
 body::-webkit-scrollbar {
   display: none;
 }
