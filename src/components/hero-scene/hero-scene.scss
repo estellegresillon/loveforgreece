@@ -143,3 +143,30 @@ $pink: #ffc0cb;
     }
   }
 }
+
+@media screen and (max-width: 728px) {
+  #hero-scene {
+    .button-go {
+      right: 57vw;
+      top: 78%;
+    }
+
+    .hero-scene-text {
+      position: absolute;
+      bottom: 19vh;
+      margin-left: 25px;
+
+      .title {
+        font-size: 53px;
+        line-height: 70px;
+        width: 80%;
+      }
+    }
+
+    .white-waves {
+      position: absolute;
+      bottom: 2vh;
+      right: -9vh;
+    }
+  }
+}

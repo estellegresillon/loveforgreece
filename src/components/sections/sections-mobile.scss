@@ -10,9 +10,28 @@
     .message-stroke { font-size: 42px; }
   }
 
+  #section-one {
+    .pink-waves { z-index: -999; }
+    .message-plain { font-size: 28px; }
+    .message-stroke { 
+      font-size: 32px;
+      margin-top: 10px;
+    }
+  }
+
   #section-two, #section-four {
     .message-plain { font-size: 28px; }
     .message-stroke { font-size: 32px; }
+
+    .blue-waves { z-index: -999; }
+  }
+
+  #section-two .image-locations {
+    width: 90%;
+
+    .locations {
+      width: 30%;
+    }
   }
 
   #section-three {
