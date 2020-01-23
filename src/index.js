@@ -2,12 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './index.scss';
-import App from './components/app';
 
-const options = { method: 'GET', mode: 'no-cors' };
+import Home from './components/home';
 
-setInterval(function() {
-  fetch(`http://santorini.estellegresillon.fr`, options)
-}, 300000);
-
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Home />, document.getElementById('root'));

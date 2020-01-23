@@ -31,6 +31,7 @@ $pink: #ffc0cb;
     position: absolute;
     bottom: 5vh;
     right: 8vh;
+    transition: 1s all ease;
   }
 
   .background {
@@ -48,7 +49,7 @@ $pink: #ffc0cb;
       height: 100%;
       width: 50%;
       background-color: $blue;
-      background: url("/hero2.jpg");
+      background: url("/hero2-res.jpg");
       background-size: cover;
       background-position: right;
     }
@@ -61,8 +62,9 @@ $pink: #ffc0cb;
     height: 74vh;
     width: 60vw;
     z-index: -1;
-    background: url("/hero.jpg");
+    background: url("/hero-res.jpg");
     background-size: cover;
+    transition: 1s all ease;
   }
 
   .hero-scene-text {
@@ -105,7 +107,7 @@ $pink: #ffc0cb;
     margin-top: 40px;
     margin-bottom: 18vh;
     border-radius: 30px;
-    transition: 1s all ease;
+    transition: 1s background-color ease;
 
     &:hover { background-color: #24a7ff; }
     &:active { background-color: $dark-blue; }
@@ -116,22 +118,6 @@ $pink: #ffc0cb;
       margin-left: 10px;
     }
   }
-
-  // .message-stroke {
-  //   position: absolute;
-  //   font-weight: 900;
-  //   top: 30vh;
-  //   width: 25vw;
-  //   right: 6vw;
-  //   opacity: 0.8;
-  //   font-size: 120px;
-  //   line-height: 100px;
-  //   font-style: italic;
-  //   font-family: "Playfair Display", serif;
-  //   -webkit-text-stroke-width: 1px;
-  //   -webkit-text-fill-color: rgba(0, 0, 0, 0);
-  //   -webkit-text-stroke-color: #fff;
-  // }
 }
 
 @media screen and (max-width: 728px) {

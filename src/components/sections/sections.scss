@@ -13,7 +13,7 @@ $pink: #ffc0cb;
   width: 100vw;
   height: 110vh;
   color: #fff;
-  background: url("/section2.jpg") no-repeat;
+  background: url("/section2-res.jpg") no-repeat;
   background-size: cover;
 
   .image-locations {
@@ -163,6 +163,10 @@ $pink: #ffc0cb;
   color: $dark-blue;
   padding: 0 20%;
 
+  .message-plain, .message-stroke {
+    transition: 1s all ease;
+  }
+
   .section-one-anchor, .section-four-anchor {
     opacity: 0;
   }
@@ -171,12 +175,14 @@ $pink: #ffc0cb;
     position: absolute;
     top: 10%;
     left: 10%;
+    transition: 1s all ease;
   }
 
   .blue-waves {
     position: absolute;
     bottom: 10%;
     right: 10%;
+    transition: 1s all ease;
   }
 }
 
@@ -208,7 +214,7 @@ $pink: #ffc0cb;
     .wrapper-img {
       height: 100%;
       width: 100%;
-      background-image: url("/guide.jpg");
+      background-image: url("/guide-res.jpg");
       background-attachment: fixed;
       background-repeat: no-repeat;
       background-size: contain;
@@ -279,7 +285,7 @@ $pink: #ffc0cb;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/bottom.jpg");
+  background-image: url("/bottom-res.jpg");
 }
 
 .message-stroke {

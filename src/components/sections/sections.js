@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Waypoint } from 'react-waypoint';
 
 import "./sections.scss";
@@ -8,12 +8,60 @@ const Sections = () => {
   const handleWaypointEnter = (div) => {
     const el = document.querySelector(div);
     el.classList.add("transition-on");
-  }
+  };
 
   const handleWaypointLeave = (div) => {
     const el = document.querySelector(div);
     el.classList.remove("transition-on");
+  };
+
+  const moveSectionOneElements = e => {
+    const pinkWave = document.querySelector("#section-one .pink-waves");
+    const blueWave = document.querySelector("#section-one .blue-waves");
+    const messagePlain = document.querySelector("#section-one .message-plain");
+    const messageStroke = document.querySelector("#section-one .message-stroke");
+    const pageMiddleX = window.innerWidth / 2;
+    const pageMiddleY = window.innerHeight / 2;
+    const distanceFromMiddleX = e.clientX - pageMiddleX;
+    const distanceFromMiddleY = e.clientY - pageMiddleY;
+
+    pinkWave.style.transform =
+      `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * -0.04},${distanceFromMiddleY * -0.08},0,1)`;
+    blueWave.style.transform =
+      `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * -0.04},${distanceFromMiddleY * -0.08},0,1)`;
+    messagePlain.style.transform =
+      `matrix3d(1,0,0.00,${distanceFromMiddleX * 0.0000003},0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * -0.02},${distanceFromMiddleY * -0.05},0,1)`;
+    messageStroke.style.transform =
+      `matrix3d(1,0,0.00,${distanceFromMiddleX * 0.0000003},0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * -0.02},${distanceFromMiddleY * -0.05},0,1)`;
   }
+
+  const moveSectionFourElements = e => {
+    const pinkWave = document.querySelector("#section-four .blue-waves");
+    const messagePlain = document.querySelector("#section-four .message-plain");
+    const pageMiddleX = window.innerWidth / 2;
+    const pageMiddleY = window.innerHeight / 2;
+    const distanceFromMiddleX = e.clientX - pageMiddleX;
+    const distanceFromMiddleY = e.clientY - pageMiddleY;
+
+    pinkWave.style.transform =
+      `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * -0.04},${distanceFromMiddleY * -0.08},0,1)`;
+    messagePlain.style.transform =
+      `matrix3d(1,0,0.00,${distanceFromMiddleX * 0.0000005},0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * -0.02},${distanceFromMiddleY * -0.05},0,1)`;
+  }
+
+  useEffect(() => {
+    const section = document.getElementById("section-one");
+
+    section.addEventListener("mousemove", moveSectionOneElements, false);
+    return () => section.removeEventListener("mousemove", moveSectionOneElements, false);
+  }, []);
+
+  useEffect(() => {
+    const section = document.getElementById("section-four");
+
+    section.addEventListener("mousemove", moveSectionFourElements, false);
+    return () => section.removeEventListener("mousemove", moveSectionFourElements, false);
+  }, []);
 
   return (
     <>
@@ -30,6 +78,7 @@ const Sections = () => {
           </div>
         </Waypoint>
       </div>
+
       <div id="section-two">
         <div className="image-locations">
           <div className="locations location-left">
