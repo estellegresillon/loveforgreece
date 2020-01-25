@@ -10,7 +10,8 @@ import Footer from "./footer/footer";
 
 
 const Home = () => {
-  const mouseRef = useRef(null)
+  const mouseContainer = useRef(null);
+  const mouseRef = useRef(null);
 
   const onCursorMove = (e, cursor, offset) => {
     const relX = e.clientX - offset;
@@ -25,15 +26,14 @@ const Home = () => {
   };
 
   useEffect(() => {
-    const app = document.querySelector(".app");
-    const smallCursor = document.querySelector(".cursor-small");
+    const smallCursor = mouseContainer.current;
 
-    app.addEventListener("mousemove", (e) => { onCursorMove(e, smallCursor, 5) }, false);
-    return () => app.removeEventListener("mousemove", (e) => { onCursorMove(e, smallCursor, 5) }, false);
+    window.addEventListener("mousemove", (e) => { onCursorMove(e, smallCursor, 5) }, false);
+    return () => window.removeEventListener("mousemove", (e) => { onCursorMove(e, smallCursor, 5) }, false);
   }, []);
 
   useEffect(() => {
-    const smallCursor = document.querySelector(".cursor-small");
+    const smallCursor = mouseContainer.current;
 
     window.addEventListener("scroll", () => { onScroll(smallCursor) });
     return () => window.removeEventListener("scroll", () => { onScroll(smallCursor) });
@@ -41,7 +41,7 @@ const Home = () => {
 
   return (
     <div className="app">
-      <div className="cursor-small"></div>
+      <div className="cursor-small" ref={mouseContainer}></div>
       <Overlays />
       <Header />
       <HeroScene />

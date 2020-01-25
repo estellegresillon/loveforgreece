@@ -27,7 +27,7 @@ const HeaderMobile = () => {
         {isComponentVisible &&
           <div ref={ref} className="dropdown-menu-mobile">
             <div className="navigation">
-              <div onClick={() => goToSection("section-one")} className="nav-item">
+              <div onClick={() => goToSection("section-two")} className="nav-item">
                 WHAT TO DO
               </div>
               <div onClick={() => goToSection("section-three")} className="nav-item">

@@ -1,26 +1,26 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Waypoint } from 'react-waypoint';
 
 import "./footer.scss";
 
 const Footer = () => {
-  const handleWaypointEnter = (div) => {
-    const el = document.querySelector(div);
-    el.classList.add("transition-on");
+  const logoRef = useRef(null);
+
+  const handleWaypointEnter = ref => {
+    ref.classList.add("transition-on");
   }
 
-  const handleWaypointLeave = (div) => {
-    const el = document.querySelector(div);
-    el.classList.remove("transition-on");
+  const handleWaypointLeave = ref => {
+    ref.classList.remove("transition-on");
   }
 
   return (
     <div id="footer">
       <Waypoint
-        onEnter={() => handleWaypointEnter(".logo-anchor")}
-        onLeave={() => handleWaypointLeave(".logo-anchor")}
+        onEnter={() => handleWaypointEnter(logoRef.current)}
+        onLeave={() => handleWaypointLeave(logoRef.current)}
       >
-        <div className="logo-anchor logo">
+        <div className="logo-anchor logo" ref={logoRef}>
           <span>
             <i className="fas fa-sun" />
             <span>DIVE</span>
