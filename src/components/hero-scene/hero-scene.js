@@ -8,7 +8,7 @@ const HeroScene = () => {
   const bgImage = useRef(null);
 
   const scrollToSectionOne = () => {
-    document.getElementById("section-one").scrollIntoView();
+    document.getElementById("intro").scrollIntoView();
   }
 
   const moveSectionElements = e => {
