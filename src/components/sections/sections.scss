@@ -151,7 +151,7 @@ $pink: #ffc0cb;
   }
 }
 
-#section-one, #section-four {
+#section-one, #section-five {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -167,7 +167,7 @@ $pink: #ffc0cb;
     transition: 1s all ease;
   }
 
-  .section-one-anchor, .section-four-anchor {
+  .section-one-anchor, .section-five-anchor {
     opacity: 0;
   }
 
@@ -303,9 +303,9 @@ $pink: #ffc0cb;
   font-family: "Playfair Display", serif;
 }
 
-#section-two, #section-four { background-color: #fff; }
+#section-two, #section-five { background-color: #fff; }
 
-#section-four { 
+#section-five { 
   height: 70vh;
 
   .social-media-button {

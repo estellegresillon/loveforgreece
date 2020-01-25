@@ -6,6 +6,7 @@ import SectionTwo from "./section-two";
 import SectionOne from "./section-one";
 import SectionThree from "./section-three";
 import SectionFour from "./section-four";
+import SectionFive from "./section-five";
 
 const Sections = () => {
   const handleWaypointEnter = ref => {
@@ -35,6 +36,10 @@ const Sections = () => {
         handleWaypointLeave={handleWaypointLeave}
       />
       <div className="parallax" />
+      <SectionFive
+        handleWaypointEnter={handleWaypointEnter}
+        handleWaypointLeave={handleWaypointLeave}
+      />
     </>
   );
 }

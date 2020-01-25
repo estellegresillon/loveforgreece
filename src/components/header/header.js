@@ -26,6 +26,9 @@ const Header = () => {
           GET THE GUIDE
         </div>
         <div onClick={() => goToSection("section-four")} className="nav-item">
+          SEASONS
+        </div>
+        <div onClick={() => goToSection("section-five")} className="nav-item">
           SAY HELLO
         </div>
       </div>

@@ -1,42 +1,66 @@
-import React, { useRef, useEffect } from "react";
-import { Waypoint } from 'react-waypoint';
+import React, { useEffect, useRef } from "react";
 
-const SectionFour = ({ handleWaypointEnter, handleWaypointLeave }) => {
-  const sectionFourAnchor = useRef(null);
+import "./section-four.scss";
+import { MONTHS_BAR } from "./constant";
+
+const SectionFour = () => {
   const sectionFour = useRef(null);
-  const sectionFourPinkWave = useRef(null);
-  const sectionFourMessage = useRef(null);
+  const whiteWaves = useRef(null);
+  const whiteWavesSmall = useRef(null);
+  const graphicWrapper = useRef(null);
+  const sectionTitle = useRef(null);
 
-  const moveSectionFourElements = e => {
+  const moveSectionElements = e => {
     const pageMiddleX = window.innerWidth / 2;
     const pageMiddleY = window.innerHeight / 2;
     const distanceFromMiddleX = e.clientX - pageMiddleX;
     const distanceFromMiddleY = e.clientY - pageMiddleY;
 
-    sectionFourPinkWave.current.style.transform =
+    whiteWaves.current.style.transform =
       `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * -0.04},${distanceFromMiddleY * -0.08},0,1)`;
-    sectionFourMessage.current.style.transform =
-      `matrix3d(1,0,0.00,${distanceFromMiddleX * 0.0000005},0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * -0.02},${distanceFromMiddleY * -0.05},0,1)`;
+    whiteWavesSmall.current.style.transform =
+      `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * -0.04},${distanceFromMiddleY * -0.08},0,1)`;
+    sectionTitle.current.style.transform =
+      `matrix3d(1,0,0.00,${distanceFromMiddleX * 0.0000001},0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * -0.02},${distanceFromMiddleY * -0.05},0,1)`;
+    graphicWrapper.current.style.transform =
+      `matrix3d(1,0,0.00,${distanceFromMiddleX * 0.0000001},0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * -0.02},${distanceFromMiddleY * -0.05},0,1)`;
   }
 
   useEffect(() => {
     const section = sectionFour.current;
-    section.addEventListener("mousemove", moveSectionFourElements, false);
-    return () => section.removeEventListener("mousemove", moveSectionFourElements, false);
+    section.addEventListener("mousemove", moveSectionElements, false);
+    return () => section.removeEventListener("mousemove", moveSectionElements, false);
   }, []);
 
   return (
     <div id="section-four" ref={sectionFour}>
-      <Waypoint
-        onEnter={() => handleWaypointEnter(sectionFourAnchor.current)}
-        onLeave={() => handleWaypointLeave(sectionFourAnchor.current)}
-      >
-        <div className="section-four-anchor" ref={sectionFourAnchor}>
-          <img ref={sectionFourPinkWave} className="blue-waves" width="200px" src="/pink-waves.svg" alt="wave" />
-          <div className="message-plain" ref={sectionFourMessage}>DiveInSantorini is a crew active on social media. Check our instagram or just greet us :</div>
-          <button className="social-media-button">HELLO</button>
+      <img className="white-waves" ref={whiteWaves} width="200px" src="/white-waves.svg" alt="wave" />
+      <img className="white-waves-small" ref={whiteWavesSmall} width="100px" src="/white-waves.svg" alt="wave" />
+      <div ref={sectionTitle} className="section-four-title message-plain">
+        The best time to visit Santorini
+      </div>
+      <div className="graphic-wrapper" ref={graphicWrapper}>
+        <div className="year-bar">
+          {MONTHS_BAR.map(section => {
+            return (
+              <div key={section.month} className="month-wrapper">
+                <div className={`month-bar ${section.season}-bar`} />
+                <div className="tooltip">
+                  <div className="tooltip-season">{section.season} season</div>
+                  <div className="tooltip-description">{section.descr}</div>
+                </div>
+                <div className={`month-value ${section.month}-value`}>
+                  <div className="bar-legend-month">{section.month}</div>
+                  <div className="bar-legend-percent">{section.percent}% crowded</div>
+                </div>
+              </div>
+            )
+          })}
         </div>
-      </Waypoint>
+      </div>
+      <div className="section-four-hint">
+        - Move your mouse accross each section for more informations -
+      </div>
     </div>
   );
 };
