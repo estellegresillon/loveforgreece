@@ -22,7 +22,7 @@ const Guide = ({ handleWaypointEnter, handleWaypointLeave }) => {
         onLeave={() => handleWaypointLeave(guideRightAnchor.current)}
       >
         <div className="guide-right right-section" ref={guideRightAnchor}>
-          <div className="message-stroke">Get your guide :</div>
+          <div className="message-stroke">Get your guide for free</div>
           <div className="message-plain">Receive a free guide for your tour in the cyclades directly in your email box</div>
           <div className="guide-form">
             <label>Name</label>

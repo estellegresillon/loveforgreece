@@ -47,8 +47,12 @@ $blue: #59cbff;
     width: 46%;
     padding: 7%;
     opacity: 0;
-
-    .message-stroke, .message-plain { color: $dark-blue; }
+ 
+    .message-plain { 
+      font-size: 18px;
+      margin: 30px 0;
+      width: 50%;
+    }
 
     .guide-form {
       display: flex;
