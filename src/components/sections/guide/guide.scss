@@ -1,0 +1,94 @@
+$dark-blue: #0e207b;
+$blue: #59cbff;
+
+#guide {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 20vh;
+  height: 100vh;
+  color: $dark-blue;
+
+  .message-plain {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .left-section {
+    position: absolute;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0;
+
+    .wrapper-img {
+      height: 100%;
+      width: 100%;
+      background-image: url("/guide-res.jpg");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .right-section {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 46%;
+    padding: 7%;
+    opacity: 0;
+
+    .message-stroke, .message-plain { color: $dark-blue; }
+
+    .guide-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 80%;
+
+      input {
+        width: calc(100% - 15px);
+        height: 35px;
+        border: none;
+        outline: none;
+        padding-left: 15px;
+        margin-bottom: 20px;
+        margin-top: 8px;
+        box-shadow: 2px 2px 10px rgba(31, 62, 214, 0.1);
+      }
+
+      label {
+        text-transform: capitalize;
+        font-size: 12px;
+        color: #0e207b;
+      }
+
+      button {
+        font-weight: 900;
+        border: none;
+        padding: 15px 20px;
+        color: white;
+        background-color: $blue;
+        font-size: 13px;
+        transition: 0.5s all ease;
+        outline: none;
+        cursor: none;
+
+        &:hover { background-color: #24a7ff; }
+        &:active { background-color: $dark-blue; }
+      }
+    }
+  }
+}

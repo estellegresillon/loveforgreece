@@ -1,0 +1,60 @@
+$dark-blue: #0e207b;
+$blue: #59cbff;
+
+#say-hello {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: calc(100vw - 40%);
+  color: $dark-blue;
+  padding: 0 20%;
+  height: 70vh;
+
+  .say-hello-anchor {
+    opacity: 0;
+  }
+
+  .social-media-button {
+    font-weight: 900;
+    border: none;
+    padding: 15px 20px;
+    color: white;
+    z-index: 1;
+    background-color: $blue;
+    font-size: 13px;
+    transition: 0.5s all ease;
+    outline: none;
+    cursor: none;
+    margin-top: 30px;
+
+    .blue-waves { z-index: 0; }
+
+    &:hover { background-color: #24a7ff; }
+    &:active { background-color: $dark-blue; }
+  }
+
+  .message-plain, .message-stroke {
+    transition: 1s all ease;
+  }
+
+  .section-one-anchor, .say-hello-anchor {
+    opacity: 0;
+  }
+
+  .pink-waves {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transition: 1s all ease;
+  }
+
+  .blue-waves {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    transition: 1s all ease;
+  }
+}

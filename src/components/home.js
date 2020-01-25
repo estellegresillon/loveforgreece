@@ -2,11 +2,11 @@ import React, { useRef, useEffect } from 'react';
 
 import "./cursors.scss";
 
-import Overlays from "./overlays/overlays";
+import Overlays from "./overlays";
 import Header from "./header";
-import HeroScene from "./hero-scene/hero-scene";
-import Sections from "./sections/sections";
-import Footer from "./footer/footer";
+import HeroScene from "./hero-scene";
+import Sections from "./sections";
+import Footer from "./footer";
 
 
 const Home = () => {

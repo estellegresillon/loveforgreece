@@ -1,0 +1,163 @@
+$dark-blue: #0e207b;
+$blue: #59cbff;
+$light-pink: #ffe2e7;
+$pink: #ffc0cb;
+
+#seasons-mobile { 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 15% 0;
+  width: 100%;
+  background-color: $pink;
+  background: linear-gradient(0deg, #ff90af 0%, #ffc0cb 100%);
+
+  .seasons-anchor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+  }
+
+  .white-waves {
+    position: absolute;
+    top: 5vh;
+    right: -100px;
+    transition: 1s all ease;
+    opacity: 0.5;
+  }
+
+  .white-waves-small {
+    position: absolute;
+    bottom: 15vh;
+    left: 8vh;
+    transition: 1s all ease;
+  }
+
+  .message-plain { 
+    color: #fff;
+    font-size: 36px;
+    margin: 0 10%;
+  }
+
+  .tooltip {
+    position: absolute;
+    font-size: 14px;
+    z-index: 1;
+    background: #fff;
+    color: #0e207b;
+    text-align: left;
+    left: 5px;
+    width: calc(100% - 60px);
+    top: 5px;
+    padding: 25px;
+    display: none;
+
+    .tooltip-season, .tooltip-description {
+      opacity: 0;
+      margin-bottom: 20px;
+      animation: 1s fadeIn;
+      animation-fill-mode: forwards;
+      animation-delay: 0.5s;
+    }
+
+    .tooltip-season {
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: $blue;
+    }
+
+    .tooltip-description {
+      font-family: "Playfair Display", sans-serif;
+    }
+  }
+
+  .graphic-wrapper { 
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 40px 0;
+  }
+
+  .month-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+
+    &:hover { 
+      .tooltip { 
+        display: block; 
+      }
+    }
+
+    &:first-child {
+      .month-bar {
+        border-radius: 20px 20px 0 0;
+      }
+    }
+
+    &:last-child {
+      .month-bar {
+        border-radius: 0 0 20px 20px;
+      }
+    }
+
+    .month-bar {
+      height: 70px;
+      width: 10px;
+      background-color: $dark-blue;
+
+      &.low-bar {
+        opacity: 0.3;
+      }
+
+      &.mid-bar {
+        opacity: 0.5;
+      }
+
+      &.high-bar {
+        opacity: 0.7;
+      }
+    }
+
+    .month-value {
+      color: #fff;
+      letter-spacing: 2px;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 11px;
+
+      .bar-legend-month {
+        font-size: 16px;
+        font-family: "Playfair Display", serif;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .seasons-hint {
+    font-size: 16px;
+    font-family: "Playfair Display", serif;
+    color: #fff;
+  }
+}
+
+@keyframes descriptionFadeIn {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}

@@ -1,0 +1,163 @@
+$dark-blue: #0e207b;
+$blue: #59cbff;
+$light-pink: #ffe2e7;
+$pink: #ffc0cb;
+
+#what-to-do {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  height: 110vh;
+  color: #fff;
+  background: url("/section2-res.jpg") no-repeat;
+  background-size: cover;
+
+  .image-locations {
+    display: flex;
+    width: 80%;
+    text-transform: uppercase;
+    font-weight: 900;
+    height: 100%;
+    justify-content: space-between;
+    
+
+    .locations {
+      position: relative;
+      width: 15%;
+
+      .location-text { padding: 10px 15px; }
+
+      i {
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      .location-description { 
+        position: absolute;
+        font-size: 13px;
+        z-index: 1;
+        width: 150px;
+        background: #fff;
+        color: $dark-blue;
+        font-family: "Playfair Display", sans-serif;
+        display: none;
+        list-style: none;
+        text-transform: none;
+        font-weight: 400;
+        padding: 30px;
+        height: 130px;
+        animation: 0.5s descriptionFadeIn;
+        animation-fill-mode: forwards;
+
+        li { 
+          opacity: 0;
+          margin-bottom: 20px;
+          animation: 1s fadeIn;
+          animation-fill-mode: forwards;
+          animation-delay: 0.5s;
+        }
+        li:last-child { margin-bottom: 0px; }
+      }
+
+      &:hover {
+        .location-description { display: block; }
+      }
+    }
+
+    i {
+      top: 47px;
+      padding: 5px;
+    }
+
+    .location-left {
+      margin-top: 25%;
+      height: 30%;
+      border-left: 1px solid $pink;
+      text-align: left;
+      transition: 0.5s all ease;
+
+      .location-text { 
+        background-color: $pink;
+        transition: 0.5s all ease;
+      }
+
+      .location-description { 
+        top: 34px;
+        left: 10px;
+      }
+
+      i {
+        background-color: $pink;
+        left: 10px;
+      }
+    }
+
+    .location-center {
+      margin-top: 10%;
+      height: 20%;
+      border-right: 1px solid $dark-blue;
+      text-align: right;
+
+      .location-text { 
+        background-color: $dark-blue;
+        transition: 0.5s all ease;
+      }
+
+      .location-description { 
+        top: 34px;
+        right: 10px;
+      }
+
+      i {
+        background-color: $dark-blue;
+        right: 10px;
+      }
+    }
+
+    .location-right {
+      margin-top: 20%;
+      height: 15%;
+      border-right: 1px solid $blue;
+      text-align: right;
+
+      .location-text { 
+        background-color: $blue;
+        transition: 0.5s all ease;
+      }
+
+      .location-description { 
+        top: 34px;
+        right: 10px;
+      }
+
+      i {
+        background-color: $blue;
+        right: 10px;
+      }
+    }
+  }
+
+  .message-stroke {
+    position: absolute;
+    bottom: 15%;
+    background-color: $pink;
+    padding: 0px 25px 5px 15px;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes descriptionFadeIn {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 150px;
+  }
+}

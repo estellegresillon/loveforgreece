@@ -19,16 +19,16 @@ const Header = () => {
         SANTORINI
       </div>
       <div className="navigation">
-        <div onClick={() => goToSection("section-two")} className="nav-item">
+        <div onClick={() => goToSection("what-to-do")} className="nav-item">
           WHAT TO DO
         </div>
-        <div onClick={() => goToSection("section-three")} className="nav-item">
+        <div onClick={() => goToSection("guide")} className="nav-item">
           GET THE GUIDE
         </div>
-        <div onClick={() => goToSection("section-four")} className="nav-item">
+        <div onClick={() => goToSection("seasons")} className="nav-item">
           SEASONS
         </div>
-        <div onClick={() => goToSection("section-five")} className="nav-item">
+        <div onClick={() => goToSection("say-hello")} className="nav-item">
           SAY HELLO
         </div>
       </div>

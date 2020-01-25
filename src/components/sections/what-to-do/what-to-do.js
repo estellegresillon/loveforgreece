@@ -1,12 +1,13 @@
 import React, { useRef } from "react";
-
 import { Waypoint } from 'react-waypoint';
 
-const SectionTwo = ({ handleWaypointEnter, handleWaypointLeave }) => {
-  const sectionTwoAnchor = useRef(null);
+import "./what-to-do.scss";
+
+const WhatToDo = ({ handleWaypointEnter, handleWaypointLeave }) => {
+  const whatToDoAnchor = useRef(null);
 
   return (
-    <div id="section-two" >
+    <div id="what-to-do" >
       <div className="image-locations">
         <div className="locations location-left">
           <div className="location-text">Fira</div>
@@ -42,13 +43,13 @@ const SectionTwo = ({ handleWaypointEnter, handleWaypointLeave }) => {
         </div>
       </div>
       <Waypoint
-        onEnter={() => handleWaypointEnter(sectionTwoAnchor.current)}
-        onLeave={() => handleWaypointLeave(sectionTwoAnchor.current)}
+        onEnter={() => handleWaypointEnter(whatToDoAnchor.current)}
+        onLeave={() => handleWaypointLeave(whatToDoAnchor.current)}
       >
-        <div className="section-two-anchor message-stroke" ref={sectionTwoAnchor}>what to see, what to do</div>
+        <div className="what-to-do-anchor message-stroke" ref={whatToDoAnchor}>what to see, what to do</div>
       </Waypoint>
     </div>
   );
 };
 
-export default SectionTwo;
+export default WhatToDo;

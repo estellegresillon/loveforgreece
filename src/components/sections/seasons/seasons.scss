@@ -3,21 +3,30 @@ $blue: #59cbff;
 $light-pink: #ffe2e7;
 $pink: #ffc0cb;
 
-#section-four { 
+#seasons { 
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  text-align: center;
   width: 100%;
+  height: 100vh;
   background-color: $pink;
   background: linear-gradient(0deg, #ff90af 0%, #ffc0cb 100%);
 
+  .seasons-anchor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+  }
 
   .white-waves {
     position: absolute;
-    top: 5vh;
+    top: -4vh;
     right: -100px;
     transition: 1s all ease;
     opacity: 0.5;
@@ -25,8 +34,8 @@ $pink: #ffc0cb;
 
   .white-waves-small {
     position: absolute;
-    bottom: 15vh;
-    left: 8vh;
+    bottom: 5vh;
+    left: 3vh;
     transition: 1s all ease;
   }
 
@@ -73,7 +82,9 @@ $pink: #ffc0cb;
     }
   }
 
-  .graphic-wrapper { margin: 100px 0; }
+  .graphic-wrapper { 
+    margin: 100px 0;
+  }
 
   .year-bar {
     display: flex;
@@ -142,7 +153,7 @@ $pink: #ffc0cb;
     }
   }
 
-  .section-four-hint {
+  .seasons-hint {
     font-size: 16px;
     font-family: "Playfair Display", serif;
     color: #fff;

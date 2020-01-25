@@ -2,11 +2,13 @@ import React from "react";
 
 import "./sections.scss";
 import "./sections-mobile.scss";
-import SectionTwo from "./section-two";
-import SectionOne from "./section-one";
-import SectionThree from "./section-three";
-import SectionFour from "./section-four";
-import SectionFive from "./section-five";
+
+import Intro from "./intro";
+import WhatToDo from "./what-to-do";
+import Guide from "./guide";
+import Seasons from "./seasons";
+import SayHello from "./say-hello";
+import Pictures from "./pictures";
 
 const Sections = () => {
   const handleWaypointEnter = ref => {
@@ -19,24 +21,28 @@ const Sections = () => {
 
   return (
     <>
-      <SectionOne
+      <Intro
         handleWaypointEnter={handleWaypointEnter}
         handleWaypointLeave={handleWaypointLeave}
       />
-      <SectionTwo
+      <WhatToDo
         handleWaypointEnter={handleWaypointEnter}
         handleWaypointLeave={handleWaypointLeave}
       />
-      <SectionThree
+      <Guide
         handleWaypointEnter={handleWaypointEnter}
         handleWaypointLeave={handleWaypointLeave}
       />
-      <SectionFour
+      <Seasons
+        handleWaypointEnter={handleWaypointEnter}
+        handleWaypointLeave={handleWaypointLeave}
+      />
+      <SayHello
         handleWaypointEnter={handleWaypointEnter}
         handleWaypointLeave={handleWaypointLeave}
       />
       <div className="parallax" />
-      <SectionFive
+      <Pictures
         handleWaypointEnter={handleWaypointEnter}
         handleWaypointLeave={handleWaypointLeave}
       />
