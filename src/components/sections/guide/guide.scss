@@ -98,3 +98,28 @@ $blue: #59cbff;
     }
   }
 }
+
+@media screen and (max-width: 728px) {
+  #guide {
+    height: 100%;
+    flex-direction: column;
+
+    .left-section, .right-section {
+      position: relative;
+      width: 100%;
+
+      img {
+        height: 50vh;
+      }
+
+      .guide-form {
+        width: calc(100% - 40px);
+        margin: 20px;
+      }
+    }
+
+    button {
+      margin-bottom: 30px;
+    }
+  }
+}

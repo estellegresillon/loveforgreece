@@ -1,7 +1,6 @@
 import React from "react";
 
 import "./sections.scss";
-import "./sections-mobile.scss";
 
 import Intro from "./intro";
 import WhatToDo from "./what-to-do";

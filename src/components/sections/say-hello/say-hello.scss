@@ -58,3 +58,15 @@ $blue: #59cbff;
     transition: 1s all ease;
   }
 }
+
+@media screen and (max-width: 728px) {
+  #say-hello {
+    padding: 25% 20%;
+    height: 100%;
+    
+    .message-plain { font-size: 28px; }
+    .message-stroke { font-size: 32px; }
+
+    .blue-waves { z-index: -999; }
+  }
+}

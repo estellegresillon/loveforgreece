@@ -34,3 +34,19 @@ $dark-blue: #0e207b;
     transition: 1s all ease;
   }
 }
+
+@media screen and (max-width: 728px) {
+  #intro {
+    .pink-waves { z-index: -999; }
+    .blue-waves { 
+      z-index: -999; 
+      opacity: 0.2;
+    }
+    
+    .message-plain { font-size: 28px; }
+    .message-stroke { 
+      font-size: 32px;
+      margin-top: 10px;
+    }
+  }
+}

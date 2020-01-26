@@ -74,3 +74,7 @@ $blue: #59cbff;
     }
   }
 }
+
+@media screen and (max-width: 728px) {
+  #pictures { display: none; }
+}

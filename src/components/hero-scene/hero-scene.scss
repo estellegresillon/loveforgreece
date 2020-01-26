@@ -121,9 +121,19 @@ $pink: #ffc0cb;
 
 @media screen and (max-width: 728px) {
   #hero-scene {
-    .button-go {
-      right: 57vw;
-      top: 78%;
+    .hero-image {
+      top: 0vh;
+      left: 0vw;
+      height: 90vh;
+      width: 110vw;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .button-go, .blue {
+      display: none;
     }
 
     .message { font-size: 64px; }
@@ -134,8 +144,8 @@ $pink: #ffc0cb;
 
     .hero-scene-text {
       position: absolute;
-      bottom: 19vh;
-      margin-left: 25px;
+      top: 7vh;
+      margin-left: 5vw;
 
       .title {
         font-size: 53px;
@@ -146,7 +156,7 @@ $pink: #ffc0cb;
 
     .white-waves {
       position: absolute;
-      bottom: 2vh;
+      bottom: 20vh;
       right: -20vh;
       width: 50%;
     }

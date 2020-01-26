@@ -33,7 +33,7 @@ const HeaderMobile = () => {
               <div onClick={() => goToSection("guide")} className="nav-item">
                 GET THE GUIDE
               </div>
-              <div onClick={() => goToSection("seasons")} className="nav-item">
+              <div onClick={() => goToSection("seasons-mobile")} className="nav-item">
                 SEASONS
               </div>
               <div onClick={() => goToSection("say-hello")} className="nav-item">

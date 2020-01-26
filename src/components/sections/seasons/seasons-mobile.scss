@@ -15,6 +15,10 @@ $pink: #ffc0cb;
   background-color: $pink;
   background: linear-gradient(0deg, #ff90af 0%, #ffc0cb 100%);
 
+  .seasons-hint {
+    display: none;
+  }
+
   .seasons-anchor {
     position: relative;
     display: flex;
@@ -42,7 +46,7 @@ $pink: #ffc0cb;
   .message-plain { 
     color: #fff;
     font-size: 36px;
-    margin: 0 10%;
+    margin: 10%;
   }
 
   .tooltip {
@@ -142,12 +146,6 @@ $pink: #ffc0cb;
         margin-bottom: 5px;
       }
     }
-  }
-
-  .seasons-hint {
-    font-size: 16px;
-    font-family: "Playfair Display", serif;
-    color: #fff;
   }
 }
 

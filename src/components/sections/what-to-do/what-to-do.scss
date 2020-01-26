@@ -161,3 +161,29 @@ $pink: #ffc0cb;
     width: 150px;
   }
 }
+
+@media screen and (max-width: 728px) {
+  #what-to-do {
+    .message-stroke { 
+      font-size: 42px;
+    }
+
+    .image-locations {
+      width: 90%;
+
+      .location-center { height: 20%; }
+
+      .location-right { height: 25%; }
+
+      .locations .location-description {
+        font-size: 12px;
+        width: 70px;
+        height: 180px;
+      }
+  
+      .locations {
+        width: 30%;
+      }
+    }
+  }
+}
