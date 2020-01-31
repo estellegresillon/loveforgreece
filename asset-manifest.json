@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/loveforgreece/static/css/main.441d7aae.chunk.css",
+    "main.js": "/loveforgreece/static/js/main.8b2d1068.chunk.js",
+    "main.js.map": "/loveforgreece/static/js/main.8b2d1068.chunk.js.map",
+    "runtime-main.js": "/loveforgreece/static/js/runtime-main.1d03ccf7.js",
+    "runtime-main.js.map": "/loveforgreece/static/js/runtime-main.1d03ccf7.js.map",
+    "static/js/2.b69c3765.chunk.js": "/loveforgreece/static/js/2.b69c3765.chunk.js",
+    "static/js/2.b69c3765.chunk.js.map": "/loveforgreece/static/js/2.b69c3765.chunk.js.map",
+    "index.html": "/loveforgreece/index.html",
+    "precache-manifest.c0b3931abbde871234e0967d316af468.js": "/loveforgreece/precache-manifest.c0b3931abbde871234e0967d316af468.js",
+    "service-worker.js": "/loveforgreece/service-worker.js",
+    "static/css/main.441d7aae.chunk.css.map": "/loveforgreece/static/css/main.441d7aae.chunk.css.map",
+    "static/js/2.b69c3765.chunk.js.LICENSE": "/loveforgreece/static/js/2.b69c3765.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1d03ccf7.js",
+    "static/js/2.b69c3765.chunk.js",
+    "static/css/main.441d7aae.chunk.css",
+    "static/js/main.8b2d1068.chunk.js"
+  ]
+}
